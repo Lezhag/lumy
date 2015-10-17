@@ -227,8 +227,8 @@ module.exports = function (grunt) {
                 interrupt: true
             },
             styles: {
-                files: ['<%= app.scss %>/**/*.scss', '<%= app.js %>/**/*.scss', '<%= app.cssDir %>/vendor/**/*.scss'],
-                tasks: ['sass:dev', 'autoprefixer']
+                files: ['<%= app.scss %>/**/*.scss', '<%= app.js %>/**/*.scss', '<%= app.cssDir %>/vendor/**/*.scss', '<%= app.src %>/*.tpl.html'],
+                tasks: ['sass:dev', 'autoprefixer', 'includeSource']
             }
         }
     });
