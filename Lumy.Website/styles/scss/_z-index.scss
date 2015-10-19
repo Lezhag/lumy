@@ -1,8 +1,11 @@
 /* ==========================================================================
-Colors
+Utility for the z-index
 ========================================================================== */
 
-$white: #fff;
-$rose: #f9eff6;
-$lilac: #984e91;
-$ocean-wave: #6da1b2;
+@function z($label) {
+  @return map-get($zindex, $label);
+}
+
+
+// z-index: z('variable');
+$zindex: ();
