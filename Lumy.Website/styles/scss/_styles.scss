@@ -50,8 +50,6 @@ Base
 
 html {
     font-size: 100%; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-    -ms-text-size-adjust: 100%; /* 2 */
 }
 
 /*
@@ -59,8 +57,7 @@ html {
 * elements.
 */
 html, button, input, select, textarea {
-    font-family: sans-serif;
-    font-family: 'Nunito', sans-serif;
+    @include setFont($family: $serifFontFamily);
 }
 html, body {
     overflow-x: hidden;
@@ -72,7 +69,7 @@ html, body {
 */
 body {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
+    @include setFont($family: $serifFontFamily);
 }
 
 /*
@@ -140,24 +137,24 @@ h6 {
 * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
 */
 abbr[title] {
-    border-bottom: 1px dotted
+    border-bottom: 1px dotted;
 }
 
 /*
 * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
 */
 b, strong {
-    font-weight: bold
+    font-weight: bold;
 }
 blockquote {
-    margin: 0px
+    margin: 0;
 }
 
 /*
 * Addresses styling not present in Safari 5 and Chrome.
 */
 dfn {
-    font-style: italic
+    font-style: italic;
 }
 
 /*
@@ -172,7 +169,7 @@ mark {
 * Addresses margins set differently in IE 6/7.
 */
 p, pre {
-    margin: 1em 0
+    margin: 1em 0;
 }
 
 /*
@@ -197,7 +194,7 @@ pre {
 * Addresses CSS quotes not supported in IE 6/7.
 */
 q {
-    quotes: none
+    quotes: none;
 }
 
 /*
@@ -208,7 +205,7 @@ q:before, q:after {
     content: none;
 }
 small {
-    font-size: 75%
+    font-size: 75%;
 }
 
 /*
@@ -221,10 +218,10 @@ sub, sup {
     line-height: 0;
 }
 sup {
-    top: -0.5em
+    top: -0.5em;
 }
 sub {
-    bottom: -0.25em
+    bottom: -0.25em;
 }
 
 /* ==========================================================================
@@ -235,17 +232,17 @@ Lists
 */
 
 dl, menu, ol, ul {
-    margin: 1em 0
+    margin: 1em 0;
 }
 dd {
-    margin: 0 0 0 40px
+    margin: 0 0 0 40px;
 }
 
 /*
 * Addresses paddings set differently in IE 6/7.
 */
 menu, ol, ul {
-    padding: 0
+    padding: 0;
 }
 
 /*
@@ -273,7 +270,7 @@ img {
 * Corrects overflow displayed oddly in IE 9.
 */
 svg:not(:root) {
-    overflow: hidden
+    overflow: hidden;
 }
 
 /* ==========================================================================
@@ -284,7 +281,7 @@ Figures
 */
 
 figure {
-    margin: 0
+    margin: 0;
 }
 
 /* ==========================================================================
@@ -295,7 +292,7 @@ Forms
 */
 
 form {
-    margin: 0
+    margin: 0;
 }
 
 /*
@@ -336,7 +333,7 @@ button, input, select, textarea {
 * the UA stylesheet.
 */
 button, input {
-    line-height: normal
+    line-height: normal;
 }
 
 /*
@@ -359,7 +356,7 @@ input[type="reset"], input[type="submit"] {
 * Re-set default cursor for disabled elements.
 */
 button[disabled], input[disabled] {
-    cursor: default
+    cursor: default;
 }
 
 /*
@@ -392,7 +389,7 @@ input[type="search"] {
 * on OS X.
 */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none
+    -webkit-appearance: none;
 }
 
 /*
@@ -433,11 +430,8 @@ Global Styles
     clear: both;
 }
 a {
-    -webkit-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out;
-    -webkit-transition-duration: 300ms;
     transition-duration: 300ms;
-    -webkit-transition-property: color, border-color, background-color;
     transition-property: color, border-color, background-color;
 }
 .nopadding {
@@ -445,11 +439,12 @@ a {
     padding: 0 !important;
 }
 p {
-    font-size: 14px;
-    line-height: 25px;
+    @include setFont($size: 14px);
+    line-height: 1.5;
+
 }
 a {
-    color: #73d0da
+    color: #73d0da;
 }
 a:hover, a:focus {
     color: #73d0da;
@@ -511,36 +506,6 @@ Buttons
 }
 
 /* ==========================================================================
-Video
-========================================================================== */
-section.video i {
-    margin-right: 10px;
-    color: #323a45;
-    vertical-align: middle;
-    font-size: 50px;
-    -webkit-transition: color 300ms ease-in-out;
-    transition: color 300ms ease-in-out;
-}
-section.video h1 {
-    font-weight: 400;
-    font-size: 20px;
-}
-section.video {
-    padding: 60px 0;
-    background-color: #f6f7f9;
-}
-section.video a {
-    color: #323a45
-}
-section.video a:hover, section.video a:focus {
-    color: #73d0da;
-    text-decoration: none;
-}
-section.video a:hover i, section.video a:focus i {
-    color: #73d0da
-}
-
-/* ==========================================================================
 Custom Slider Controls (Flickity)
 ========================================================================== */
 .flickity-page-dots .dot {
@@ -549,7 +514,6 @@ Custom Slider Controls (Flickity)
     opacity: 1;
     background: transparent;
     border: 2px solid white;
-    -webkit-transition: background 0.3s;
     transition: background 0.3s;
 }
 .flickity-page-dots .dot.is-selected {
@@ -832,20 +796,6 @@ Screenshots
 }
 
 /* ==========================================================================
-Download Now
-========================================================================== */
-.download {
-    padding: 120px 0;
-    background-color: #3f6184;
-}
-.download h1 {
-    margin: 0 0 15px 0;
-    color: #fff;
-    font-weight: 400;
-    font-size: 40px;
-}
-
-/* ==========================================================================
 Footer
 ========================================================================== */
 footer {
@@ -870,112 +820,6 @@ footer li a {
 }
 footer li:last-child {
     margin-right: 0
-}
-
-/* ==========================================================================
-Nav Overlay
-========================================================================== */
-/* Overlay style */
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(52, 82, 113, 0.95);
-}
-
-/* Menu style */
-.overlay nav {
-    position: relative;
-    top: 50%;
-    height: 60%;
-    text-align: center;
-    font-size: 54px;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-.overlay ul {
-    position: relative;
-    display: inline-block;
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-}
-.overlay ul li {
-    display: block;
-    float: left;
-    margin-right: 20px;
-}
-.overlay ul li:last-child {
-    margin-right: 0px
-}
-.overlay ul li i {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 40px;
-}
-.overlay ul li a {
-    display: block;
-    padding: 50px 0;
-    min-width: 190px;
-    border: 2px solid #fff;
-    border-radius: 3px;
-    background-color: #345271;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 15px;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-.overlay ul li a:hover, .overlay ul li a:focus {
-    border-color: #73d0da;
-    color: #73d0da;
-}
-
-/* Effects */
-.overlay-boxify {
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-    transition: opacity 0.5s, visibility 0s 0.5s;
-}
-.overlay-boxify.open {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-}
-.overlay-boxify nav ul li {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -80px, 0);
-    transform: translate3d(0, -80px, 0);
-    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-    transition: transform 0.5s, opacity 0.5s;
-}
-.overlay-boxify.open nav ul:first-child li:first-child {
-    -webkit-transition-delay: 0.05s;
-    transition-delay: 0.05s;
-}
-.overlay-boxify.open nav ul:first-child li:nth-child(2) {
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s;
-}
-.overlay-boxify.open nav ul:nth-child(2) li:first-child {
-    -webkit-transition-delay: 0.15s;
-    transition-delay: 0.15s;
-}
-.overlay-boxify.open nav ul:nth-child(2) li:nth-child(2) {
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-}
-.overlay-boxify.open nav ul li {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
 }
 
 /* ==========================================================================

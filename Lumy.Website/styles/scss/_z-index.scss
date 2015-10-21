@@ -8,4 +8,6 @@ Utility for the z-index
 
 
 // z-index: z('variable');
-$zindex: ();
+$zindex: (
+        'nav-toggle': 1000
+);

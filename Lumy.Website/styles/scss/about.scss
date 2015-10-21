@@ -1,0 +1,29 @@
+/* ==========================================================================
+About section
+========================================================================== */
+section.video i {
+  margin-right: 10px;
+  color: #323a45;
+  vertical-align: middle;
+  font-size: 50px;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+section.video h1 {
+  font-weight: 400;
+  font-size: 20px;
+}
+section.video {
+  padding: 60px 0;
+  background-color: #f6f7f9;
+}
+section.video a {
+  color: #323a45
+}
+section.video a:hover, section.video a:focus {
+  color: #73d0da;
+  text-decoration: none;
+}
+section.video a:hover i, section.video a:focus i {
+  color: #73d0da
+}
