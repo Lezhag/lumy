@@ -49,7 +49,9 @@ module.exports = function (grunt) {
                     src: ['<%= app.bower %>/bootstrap/dist/css/*.css', '!<%= app.bower %>/bootstrap/dist/css/*.min.css',
                         '<%= app.bower %>/fancybox/source/*.css', '!<%= app.bower %>/fancybox/source/*.min.css',
                         '<%= app.bower %>/flickity/dist/*.css', '!<%= app.bower %>/flickity/dist/*.min.css',
-                        '<%= app.node %>/animate.css/*.css', '!<%= app.node %>/animate.css/*.min.css'],
+                        '<%= app.node %>/animate.css/*.css', '!<%= app.node %>/animate.css/*.min.css',
+                        '<%= app.bower %>/magnific-popup/dist/*.css', '!<%= app.bower %>/magnific-popup/dist/*.min.css'
+                    ],
                     dot: true,
                     flatten: true,
                     expand: true,
@@ -66,7 +68,8 @@ module.exports = function (grunt) {
                         '<%= app.bower %>/fancybox/source/jquery.fancybox.js',
                         '<%= app.bower %>/retina.js/src/retina.js',
                         '<%= app.node %>/waypoints/lib/noframework.waypoints.js',
-                        '<%= app.bower %>/bootstrap/dist/js/bootstrap.js'
+                        '<%= app.bower %>/bootstrap/dist/js/bootstrap.js',
+                        '<%= app.bower %>/magnific-popup/dist/jquery.magnific-popup.js'
                     ],
                     dot: true,
                     flatten: true,
