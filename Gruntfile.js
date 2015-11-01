@@ -50,7 +50,8 @@ module.exports = function (grunt) {
                         '<%= app.bower %>/fancybox/source/*.css', '!<%= app.bower %>/fancybox/source/*.min.css',
                         '<%= app.bower %>/flickity/dist/*.css', '!<%= app.bower %>/flickity/dist/*.min.css',
                         '<%= app.node %>/animate.css/*.css', '!<%= app.node %>/animate.css/*.min.css',
-                        '<%= app.bower %>/magnific-popup/dist/*.css', '!<%= app.bower %>/magnific-popup/dist/*.min.css'
+                        '<%= app.bower %>/magnific-popup/dist/*.css', '!<%= app.bower %>/magnific-popup/dist/*.min.css',
+                        '<%= app.bower %>/flexboxgrid/dist/*.css', '!<%= app.bower %>/flexboxgrid/dist/*.min.css'
                     ],
                     dot: true,
                     flatten: true,
