@@ -56,9 +56,11 @@ module.exports = function (grunt) {
                     dot: true,
                     flatten: true,
                     expand: true,
-                    rename: function (dest, src) {
-                        return dest + "_" + src.replace('.css', '.scss');
-                    }
+                    ext: '.scss',   // Dest filepaths will have this extension.
+                    extDot: 'first'
+                    //rename: function (dest, src) {
+                    //    return dest + "_" + src.replace('.css', '');
+                    //}
                 }]
             },
             js: {
@@ -92,6 +94,22 @@ module.exports = function (grunt) {
                 expand: true,
                 dest:'<%= app.src %>/init/',
                 src: '<%= app.bower %>/jquery/dist/jquery.js'
+            },
+            images: {
+                nonull: true,
+                expand: true,
+                filter: 'isFile',
+                cwd: '<%= app.images %>/',
+                src: ['**'],
+                dest: '<%= app.dist %>/images/'
+            },
+            fonts: {
+                nonull: true,
+                expand: true,
+                filter: 'isFile',
+                cwd: '<%= app.src %>/fonts',
+                src: ['**'],
+                dest: '<%= app.dist %>/fonts/'
             }
         },
 
@@ -143,7 +161,9 @@ module.exports = function (grunt) {
                 '<%= app.dist %>/css/vendor.*',
                 '<%= app.dist %>/scripts/vendor.*',
                 '<%= app.dist %>/scripts/main.*',
-                '<%= app.dist %>/init/*.*'
+                '<%= app.dist %>/init/*.*',
+                '<%= app.dist %>/images/**',
+                '<%= app.dist %>/fonts/**'
             ]
         },
 
@@ -240,7 +260,7 @@ module.exports = function (grunt) {
     // usemin creates the configuration for :generated subtasks
     grunt.registerTask('default', ['dev', 'watch']);
     grunt.registerTask('release', ['clean:all', 'includeSource', 'sass:release', 'autoprefixer', 'useminPrepare', 'concat:generated',
-        'uglify:generated', 'filerev', 'copy:init', 'copy:html', 'usemin']);
+        'uglify:generated', 'filerev', 'copy:init', 'copy:html', 'copy:images', 'usemin']);
     grunt.registerTask('dev', ['clean:all', 'copy:js', 'copy:jquery', 'copy:css','sass:dev', 'autoprefixer', 'includeSource']);
     grunt.registerTask('update', ['dev']);
     grunt.registerTask('unitTest', ['clean:all', 'useminPrepare', 'uglify:generated', 'karma:unit', 'karma:unit_legacy']);
