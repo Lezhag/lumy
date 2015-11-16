@@ -260,7 +260,7 @@ module.exports = function (grunt) {
     // usemin creates the configuration for :generated subtasks
     grunt.registerTask('default', ['dev', 'watch']);
     grunt.registerTask('release', ['clean:all', 'includeSource', 'sass:release', 'autoprefixer', 'useminPrepare', 'concat:generated',
-        'uglify:generated', 'filerev', 'copy:init', 'copy:html', 'copy:images', 'usemin']);
+        'uglify:generated', 'filerev', 'copy:init', 'copy:html', 'copy:images', 'copy:fonts', 'usemin']);
     grunt.registerTask('dev', ['clean:all', 'copy:js', 'copy:jquery', 'copy:css','sass:dev', 'autoprefixer', 'includeSource']);
     grunt.registerTask('update', ['dev']);
     grunt.registerTask('unitTest', ['clean:all', 'useminPrepare', 'uglify:generated', 'karma:unit', 'karma:unit_legacy']);
