@@ -1,0 +1,67 @@
+/* ==========================================================================
+Navigation
+========================================================================== */
+.nav-toggle {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  z-index: z('nav-toggle');
+  padding: 10px 35px 16px 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+.nav-span, .nav-span:before, .nav-span:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 5px;
+  border-radius: 1px;
+  background-color: $white;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-span {
+  &:before {
+    top: -10px
+  }
+  &:after {
+    bottom: -10px
+  }
+}
+
+.nav-toggle.active {
+  .nav-span {
+    background-color: transparent;
+    &:before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    &:after {
+      top: 10px;
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
+
+.navicon {
+  position: relative;
+  height: 26px;
+}
+
+.navicon-content {
+  padding-left: 50px;
+  margin: 1px 0 50px 0;
+}
+
+.navicon-fixed {
+  position: fixed;
+  top: 59px;
+  left: 143px;
+}
+
+

@@ -1,0 +1,23 @@
+{
+  "name": "lumy-onepager",
+  "version": "1.0.0",
+  "homepage": "https://www.lumy.com",
+  "authors": [
+    "oleg.glyb@gmail.com"
+  ],
+  "license": "",
+  "private": true,
+  "dependencies": {
+    "UtilityBelt": "1.2.0",
+    "bootstrap": "3.3.5",
+    "fancybox": "2.1.5",
+    "jquery": "~1.11.1",
+    "lodash": "3.10.0",
+    "moment": "2.10.3",
+    "flickity": "1.1.1",
+    "fitvids": "1.1.0",
+    "retina.js": "1.3.0",
+    "magnific-popup": "1.0.0",
+    "flexboxgrid": "6.3.0"
+  }
+}

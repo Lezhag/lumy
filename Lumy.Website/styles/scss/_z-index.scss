@@ -1,0 +1,14 @@
+/* ==========================================================================
+Utility for the z-index
+========================================================================== */
+
+@function z($label) {
+  @return map-get($zindex, $label);
+}
+
+
+// z-index: z('variable');
+$zindex: (
+        'nav-toggle': 1000,
+        'sticky-header': 100
+);
