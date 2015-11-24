@@ -49,17 +49,33 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body dir="rtl">
+<body dir="rtl" class="home">
 <!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
 <![endif]-->
 <!-- open/close -->
 <header class="page-header">
     <div class="header-content">
-        <a href="" class="header-logo"></a>
-        <span class="menu-title">תפריט</span>
-        <a href="" class="menu-flower"></a>
+        <a class="header-logo"></a>
+        <a class="menu-toggler">
+            <div class="menu-title">תפריט</div>
+            <div class="menu-flower"></div>
+        </a>
+        <nav class="main-menu">
+            <div class="menu-content">
+                <ul class="menu-items">
+                    <li>
+                        <a href="" class="menu-item">
+                            <span class="menu-item-text">first</span>
+                        </a>
+                        <a href="" class="menu-item">
+                            <span class="menu-item-text">second</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 </header>
 <section class="frontPage">
@@ -68,10 +84,6 @@
         <div class="row nav-wrapper">
             <div class="col-md-6 col-sm-6 col-xs-6 text-right pull-right">
                 <a href="#"><img class="lumy-logo" src="images/lumy-logo-bkg.png" alt="Lumy Logo"></a>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 text-left navicon pull-right">
-                <p class="navicon-content">תפריט</p><a id="trigger-overlay" class="nav_slide_button nav-toggle"
-                                                       href="#"><span class="nav-span"></span></a>
             </div>
         </div>
         <div class="row">

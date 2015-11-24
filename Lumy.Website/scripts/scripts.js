@@ -82,6 +82,11 @@ $(".overlay").click(function() {
 	$(".overlay-boxify").toggleClass("open");
 });
 
+$('.menu-toggler').click(function() {
+	"use strict";
+	$('.home').toggleClass("js-menu-open");
+});
+
 /***************** Smooth Scrolling ******************/
 
 $('a[href*=#]:not([href=#])').click(function() {
