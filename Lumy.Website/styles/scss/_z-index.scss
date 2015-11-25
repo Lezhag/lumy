@@ -9,8 +9,9 @@ Utility for the z-index
 
 // z-index: z('variable');
 $zindex: (
-        'nav-toggle': 1000,
         'sticky-header': 100,
         'main-menu': 101,
-        'menu-content': 10
+        'menu-content': 105,
+        'menu-flower': 102,
+        'menu-image': 101
 );

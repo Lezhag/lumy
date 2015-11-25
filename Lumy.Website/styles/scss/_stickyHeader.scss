@@ -47,9 +47,18 @@
   height: 40px;
   margin-top: 5px;
   margin-left: 10px;
-  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in-out;
+  cursor: pointer;
+  z-index: z('menu-flower');
   &:hover {
     transform: rotate(85deg);
+  }
+  &.js-close {
+    background: url('../images/flower-violet-close.png') no-repeat;
+    background-size: 100%;
+    &:hover {
+      transform: none;
+    }
   }
 }
 
@@ -57,4 +66,5 @@
   @include setFont($size: 18px);
   padding: 14px;
   cursor: pointer;
+  color: $ocean-wave;
 }

@@ -84,7 +84,8 @@ $(".overlay").click(function() {
 
 $('.menu-toggler').click(function() {
 	"use strict";
-	$('.home').toggleClass("js-menu-open");
+	$('.home').toggleClass('js-menu-open');
+	$('.menu-flower').toggleClass('js-close');
 });
 
 /***************** Smooth Scrolling ******************/
