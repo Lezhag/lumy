@@ -2,345 +2,133 @@
 Navigation
 ========================================================================== */
 .menu-toggler {
-  display: flex;
+    display: flex;
 }
+
 //main menu
 .main-menu {
-  transition: 550ms ease-in-out;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: z('main-menu');
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  opacity: 0;
-  background: $rose;
-
-  .menu-content {
-    position: relative !important;
-    top: 25px !important;
+    transition: 550ms ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: z('main-menu');
     width: 100%;
-    z-index: z('menu-content');
-    max-height: 90%;
-    max-height: calc(100% - 50px);
-  }
-}
-
-@media screen and (min-width: $tabletLandscape) {
-  .main-menu .menu-content {
-    float: left;
-    width: 50%;
-    top: 50px !important;
-    max-height: calc(100% - 100px);
-    transform: translate(0, 0);
-  }
-}
-
-@media screen and (min-width: $mediumDesktop) {
-  .main-menu .menu-content {
-    width: 40%;
-  }
-}
-
-.main-menu .menu-items {
-  width: 80%;
-  margin: auto;
-  counter-reset: menu-item;
-}
-
-//.main-menu .menu-items li {
-//  margin: .5em 0;
-//  text-align: left;
-//  line-height: 1.5em;
-//  background: url(../images/dots.png) repeat-x 0 75%;
-//  opacity: 0;
-//  counter-increment: menu-item;
-//  transform: translateX(-3%)
-//}
-//
-//.main-menu .menu-items li a {
-//  display: block
-//}
-//
-//.main-menu .menu-items li a .main-menu-text, .main-menu .menu-items li a .main-menu-number {
-//  background: white
-//}
-//
-//.main-menu .menu-items li a .main-menu-text {
-//  @include setFont($size: 22px);
-//  padding-right: .25em;
-//  text-transform: uppercase;
-//}
-//
-//.main-menu .menu-items li a .main-menu-text em, .main-menu .menu-items li a .main-menu-text .slash {
-//  display: none;
-//  text-transform: capitalize;
-//}
-//
-//.main-menu .menu-items li a .main-menu-number {
-//  position: relative;
-//  top: 0;
-//  float: right;
-//@include setFont($size: 20px);
-//}
-//
-//.main-menu .menu-items li a .main-menu-number:before {
-//  position: relative;
-//  top: -.1em;
-//  content: "0";
-//  vertical-align: text-bottom;
-//  padding-right: .1em;
-//  font-family: freight-display-pro, Arial, sans-serif;
-//  font-weight: 300;
-//  font-size: .7em;
-//  font-style: italic;
-//  color: #bdbdbd
-//}
-//
-//.main-menu .menu-items li a .main-menu-number:after {
-//  content: counter(menu-item)
-//}
-//
-//.main-menu .menu-items li a:focus .main-menu-text, .main-menu .menu-items li a:hover .main-menu-text, .main-menu .menu-items li a:focus .main-menu-number, .main-menu .menu-items li a:hover .main-menu-number {
-//  color: #bdbdbd
-//}
-//
-//.main-menu .menu-items li a:focus .main-menu-text em, .main-menu .menu-items li a:hover .main-menu-text em, .main-menu .menu-items li a:focus .main-menu-text:before, .main-menu .menu-items li a:hover .main-menu-text:before, .main-menu .menu-items li a:focus .main-menu-number em, .main-menu .menu-items li a:hover .main-menu-number em, .main-menu .menu-items li a:focus .main-menu-number:before, .main-menu .menu-items li a:hover .main-menu-number:before {
-//  color: #6a6a6a
-//}
-//
-//.js-menu-open .main-menu .menu-items li:nth-child(1) {
-//  transition: transform .4s ease .25s, opacity .4s ease .25s
-//}
-//
-//.js-menu-open .main-menu .menu-items li:nth-child(2) {
-//  transition: transform .4s ease .35s, opacity .4s ease .35s
-//}
-//
-//.js-menu-open .main-menu .menu-items li:nth-child(3) {
-//  transition: transform .4s ease .45s, opacity .4s ease .45s
-//}
-//
-//.js-menu-open .main-menu .menu-items li:nth-child(4) {
-//  transition: transform .4s ease .55s, opacity .4s ease .55s
-//}
-//
-//.js-menu-open .main-menu .menu-items li:nth-child(5) {
-//  transition: transform .4s ease .65s, opacity .4s ease .65s
-//}
-//
-//.js-menu-open .main-menu .menu-items li:nth-child(6) {
-//  transition: transform .4s ease .75s, opacity .4s ease .75s
-//}
-//
-//.js-menu-open .main-menu .menu-items li:nth-child(7) {
-//  transition: transform .4s ease .85s, opacity .4s ease .85s
-//}
-//
-//.js-menu-open .main-menu .menu-items li:nth-child(8) {
-//  transition: transform .4s ease .95s, opacity .4s ease .95s
-//}
-//
-//@media screen and (min-width: 1000px) {
-//  .main-menu .menu-items li {
-//    line-height: 2em
-//  }
-//
-//  .main-menu .menu-items li a .main-menu-text {
-//    font-size: 30px;
-//    font-size: 1.875rem
-//  }
-//
-//  .main-menu .menu-items li a .main-menu-text em {
-//    width: 4em;
-//    text-align: right
-//  }
-//
-//  .main-menu .menu-items li a .main-menu-text em, .main-menu .menu-items li a .main-menu-text .slash {
-//    display: inline-block
-//  }
-//
-//  .main-menu .menu-items li a .main-menu-number {
-//    font-size: 28px;
-//    font-size: 1.75rem;
-//    top: .35em
-//  }
-//}
-
-@media screen and (min-width: $largeScreen) {
-  .main-menu .menu-items {
-    width: 70%;
-  }
-}
-
-//@media screen and (min-height: 650px) {
-//  .main-menu .menu-items li {
-//    margin: .75em 0
-//  }
-//}
-//
-//@media screen and (min-height: 800px) {
-//  .main-menu .menu-items li {
-//    margin: 1.25em 0
-//  }
-//}
-//
-//@media screen and (min-height: 900px) {
-//  .main-menu .menu-items li {
-//    margin: 1.5em 0;
-//  }
-//}
-
-.main-menu .menu-image {
-  display: none;
-  transform: translateZ(0);
-}
-
-@media screen and (min-width: $tabletLandscape) {
-  .main-menu .menu-image {
-    position: relative;
-    display: block;
-    float: left;
     height: 100%;
-    width: 50%;
-    background: $rose url('../images/gallery/basket.jpg') no-repeat 0 50%;
-    background-size: cover;
+    visibility: hidden;
+    opacity: 0;
+    background: $rose;
 
-    &:after, &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      z-index: z('menu-image');
-      width: 100%;
-      transform: skew(-17deg, 0);
-      transform-origin: 100% 100%;
-      transition: transform .4s ease .15s;
+    .menu-content {
+        position: relative;
+        width: 100%;
+        z-index: z('menu-content');
+        max-height: 90%;
+        margin-top: 50px;
+        max-height: calc(100% - 50px);
+        @media screen and (min-width: $tabletLandscape) {
+            float: left;
+            width: 50%;
+            max-height: calc(100% - 100px);
+            transform: translate(0%, 0%);
+        }
+        @media screen and (min-width: $mediumDesktop) {
+            width: 40%;
+        }
     }
 
-    &:after {
-      left: -100%;
-      background: $rose;
+    .menu-items {
+        width: 65%;
+        margin: auto;
     }
 
-    &:before {
-      left: -99.5%;
-      left: calc(-100% + 5px);
-      border-right: 1px solid rgba(255, 255, 255, .7);
+    .menu-image {
+        display: none;
+        transform: translateZ(0);
+        @media screen and (min-width: $tabletLandscape) {
+            position: relative;
+            display: block;
+            float: left;
+            height: 100%;
+            width: 50%;
+            background: $rose url('../images/gallery/basket.jpg') no-repeat 0 50%;
+            background-size: cover;
+
+            &:after, &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                z-index: z('menu-image');
+                width: 100%;
+                transform-origin: 100% 100%;
+                transition: transform .4s ease .15s, all 550ms ease-in-out 550ms;
+                transform: skew(0, 0);
+            }
+
+            &:after {
+                left: -100%;
+                background: $rose;
+            }
+
+            &:before {
+                left: -99.5%;
+                left: calc(-100% + 5px);
+                border-right: 1px solid rgba(255, 255, 255, .7);
+            }
+        }
+        @media screen and (min-width: $mediumDesktop) {
+            width: 60%;
+            background-image: url('../images/gallery/basket.jpg');
+        }
     }
-
-    &:after, &:before {
-      transition: all 550ms ease-in-out 550ms;
-      transform: skew(0, 0);
+    .page-header-social {
+        display: block;
+        opacity: 0;
+        margin-top: 1.5em;
+        transition: opacity .4s ease .9s;
+        @media screen and (min-width: $tabletLandscape) {
+            display: none;
+        }
     }
-  }
 }
 
-@media screen and (min-width: $mediumDesktop) {
-  .main-menu .menu-image {
-    width: 60%;
-    background-image: url('../images/gallery/basket.jpg');
-  }
+.js-menu-open .main-menu {
+    visibility: visible;
+    opacity: 1;
+    .menu-items li {
+        transform: translateX(0);
+        opacity: 1;
+        margin: 24px auto;
+    }
+    .page-header-social {
+        opacity: 1;
+    }
+    .menu-image:after, .menu-image:before {
+        transition-delay: 0ms;
+        transform: translate(0, 0) translateZ(0) skew(-17deg, 0);
+    }
 }
 
-.main-menu .page-header-social {
-  display: block;
-  opacity: 0;
-  margin-top: 1.5em;
-  transition: opacity .4s ease .9s;
+.menu-item {
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
-.js-menu-open .main-menu, .js-menu-closing .main-menu {
-  visibility: visible;
-  opacity: 1;
+.menu-item-text {
+    @include setFont($size: 30px);
+    color: $ocean-wave;
+}
+$lotus-dims: 35px;
+.lotus {
+    display: inline-block;
+    height: $lotus-dims;
+    width: $lotus-dims;
+    background: $rose url('../images/lotus.png') no-repeat 0 100%;
+    background-size: $lotus-dims;
 }
 
-.js-menu-open .main-menu .menu-items li, .js-menu-closing .main-menu .menu-items li {
-  transform: translateX(0);
-  opacity: 1;
-}
 
-.js-menu-open .main-menu .page-header-social, .js-menu-closing .main-menu .page-header-social {
-  opacity: 1;
-}
-
-.js-menu-open .main-menu .menu-image:after, .js-menu-open .main-menu .menu-image:before, .js-menu-closing .main-menu .menu-image:after, .js-menu-closing .main-menu .menu-image:before {
-  transition-delay: 0;
-  transform: translate(0, 0) translateZ(0) skew(-17deg, 0);
-}
-
-.js-menu-closing .main-menu {
-  transition: none;
-}
-
-.js-menu-ajax-closing .main-menu .menu-items li {
-  transform: translateX(-3%);
-  opacity: 0;
-}
-
-.js-menu-ajax-closing .main-menu .menu-items li:nth-child(1) {
-  transition: transform .4s ease .75s, opacity .4s ease .75s;
-}
-
-.js-menu-ajax-closing .main-menu .menu-items li:nth-child(2) {
-  transition: -webkit-transform .4s ease .65s, opacity .4s ease .65s;
-  transition: transform .4s ease .65s, opacity .4s ease .65s
-}
-
-.js-menu-ajax-closing .main-menu .menu-items li:nth-child(3) {
-  transition: -webkit-transform .4s ease .55s, opacity .4s ease .55s;
-  transition: transform .4s ease .55s, opacity .4s ease .55s
-}
-
-.js-menu-ajax-closing .main-menu .menu-items li:nth-child(4) {
-  transition: -webkit-transform .4s ease .45s, opacity .4s ease .45s;
-  transition: transform .4s ease .45s, opacity .4s ease .45s
-}
-
-.js-menu-ajax-closing .main-menu .menu-items li:nth-child(5) {
-  transition: -webkit-transform .4s ease .35s, opacity .4s ease .35s;
-  transition: transform .4s ease .35s, opacity .4s ease .35s
-}
-
-.js-menu-ajax-closing .main-menu .menu-items li:nth-child(6) {
-  transition: -webkit-transform .4s ease .25s, opacity .4s ease .25s;
-  transition: transform .4s ease .25s, opacity .4s ease .25s
-}
-
-.js-menu-ajax-closing .main-menu .menu-items li:nth-child(7) {
-  transition: -webkit-transform .4s ease .15s, opacity .4s ease .15s;
-  transition: transform .4s ease .15s, opacity .4s ease .15s
-}
-
-.js-menu-ajax-closing .main-menu .menu-items li:nth-child(8) {
-  transition: -webkit-transform .4s ease .05s, opacity .4s ease .05s;
-  transition: transform .4s ease .05s, opacity .4s ease .05s
-}
-
-@media screen and (min-width: $tabletLandscape) {
-  .js-menu-ajax-closing .main-menu .menu-image:after, .js-menu-ajax-closing .main-menu .menu-image:before {
-    left: calc(-100% - 1px);
-    width: calc(100% + 1px);
-    transform: translate(100%, 0) translateZ(0) skew(0, 0)
-  }
-}
-
-.js-menu-ajax-closing .main-menu .ajax-loader {
-  opacity: 1;
-  visibility: visible;
-  background: transparent;
-}
-
-@media screen and (min-width: $tabletLandscape) {
-  .main-menu .page-header-social {
-    display: none;
-  }
-
-  .main-menu .menu-content {
-    position: static !important;
-  }
-}
 
 

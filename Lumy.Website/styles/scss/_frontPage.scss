@@ -21,16 +21,10 @@ Front page cover
 }
 
 .tagline {
-  margin: 200px 0 45px 0;
+  margin: 100px 0 45px 0;
   @include setFont($family: $sansHeadersFontFamily, $size: 45px);
 }
 
-.lumy-logo {
-  width: 100px;
-  &:hover {
-
-  }
-}
 header i {
-  margin-left: 5px
+  margin-left: 5px;
 }
