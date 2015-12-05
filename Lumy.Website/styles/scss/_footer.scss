@@ -1,0 +1,31 @@
+/* ==========================================================================
+Footer
+========================================================================== */
+footer {
+    padding: 100px 0;
+}
+
+footer p {
+    color: #c7cacc;
+    font-size: 12px;
+}
+
+footer ul {
+    margin-top: 30px;
+}
+
+footer li {
+    float: left;
+    margin-right: 15%;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+footer li a {
+    color: #3f6184;
+}
+
+footer li:last-child {
+    margin-right: 0;
+}

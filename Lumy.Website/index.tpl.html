@@ -22,9 +22,18 @@
     <!-- build:css css/vendor.min.css -->
     <link rel="stylesheet" href="styles/vendor.css"/>
     <!-- endbuild -->
-    <!-- build:css css/main.min.css -->
-    <link rel="stylesheet" href="styles/main.css"/>
-    <!-- endbuild -->
+
+    <!--[if gt IE 8 | IEMobile] ><!-->
+        <!-- build:css css/main.min.css -->
+        <link rel="stylesheet" href="styles/main.css"/>
+        <!-- endbuild -->
+    <!--<![endif]-->
+
+    <!--&lt;!&ndash;[if lt IE 9 & !IEMobile]>-->
+        <!--&lt;!&ndash; build:css css/main-ie.min.css &ndash;&gt;-->
+        <!--<link rel="stylesheet" href="styles/main-ie.css"/>-->
+        <!--&lt;!&ndash; endbuild &ndash;&gt;-->
+    <!--<![endif]&ndash;&gt;-->
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!--Google webfonts-->
@@ -73,6 +82,12 @@
 
                     </li>
                     <li>
+                        <a href="#head-wreath" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">זרים לראש</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="" class="menu-item">
                             <span class="lotus"></span>
                             <span class="menu-item-text">זרי כלה</span>
@@ -88,12 +103,6 @@
                         <a href="" class="menu-item">
                             <span class="lotus"></span>
                             <span class="menu-item-text">עמדת שזירת פרחים</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="menu-item">
-                            <span class="lotus"></span>
-                            <span class="menu-item-text">זרים לראש</span>
                         </a>
                     </li>
                     <li>
@@ -126,6 +135,7 @@
         </nav>
     </div>
 </header>
+
 <section class="frontPage">
     <div class="texture-overlay"></div>
         <div class="row">
@@ -133,17 +143,17 @@
                 <div class="container">
                     <h1 class="animated fadeInDown tagline">לומי - עמדת שזירת תכשיטי פרחים לאירועים
                         יחודיים</h1>
-                    <a href="#contactUs" class="use-btn animated fadeInUp copy-font">ליצור קשר<i
-                            class="fa fa-envelope-o"></i></a>
-                    <a href="#about" class="learn-btn animated fadeInUp copy-font">קצת על לומי
-                        <i class="fa fa-arrow-down"></i>
+                    <a href="#contactUs" class="use-btn animated fadeInUp copy-font"><i class="fa fa-envelope-o"></i>יצירת קשר</a>
+                    <a href="#about" class="learn-btn animated fadeInUp copy-font"><i class="fa fa-arrow-down"></i>אודות לומי
+
                     </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="video" id="about">
+
+<section id="about" class="video" >
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -153,6 +163,16 @@
         </div>
     </div>
 </section>
+
+<section id="head-wreath" class="section-page head-wreath">
+    <div class="section-textContainer">
+        <h1 class="section-title">זרים לראש</h1>
+        <div class="section-content">בהשחתה מחליטה שינויים דת כדי, שתי להפוך מונחונים של, של צעד לטיפול החופשית. מה זכר וקשקש משפטים, לעברית מיוחדים מה אחר. של תיבת תורת נוסחאות מלא. המשפט העמוד בכפוף מה ארץ. תוכל נפלו ביולי או שכל, את אחר לאחרונה ארכיאולוגיה, על עזה שדרות מדינות. מיזמי רקטות ביולי אחד ב, זאת אחרונים פוליטיקה ממונרכיה גם.</div>
+    </div>
+        <div class="section-image popup-gallery">
+    </div>
+</section>
+
 <section class="features-intro">
     <div class="container-fluid">
         <div class="row">
@@ -203,6 +223,7 @@
         </div>
     </div>
 </section>
+
 <section class="features-list" id="features">
     <div class="container">
         <div class="row">
@@ -252,6 +273,7 @@
         </div>
     </div>
 </section>
+
 <section class="showcase">
     <div class="showcase-wrap">
         <div class="texture-overlay"></div>
@@ -299,6 +321,7 @@
         </div>
     </div>
 </section>
+
 <section class="screenshots-intro">
     <div class="container">
         <div class="row">
@@ -314,6 +337,7 @@
         </div>
     </div>
 </section>
+
 <section class="screenshots" id="screenshots">
     <div class="popup-gallery">
         <div class="row">
@@ -399,6 +423,7 @@
                     <!--</figure>-->
                 <!--</li>-->
 </section>
+
 <section class="contactUs" id="contactUs">
     <div class="container">
         <div class="row">
@@ -410,6 +435,7 @@
         </div>
     </div>
 </section>
+
 <footer>
     <div class="container">
         <div class="row">
@@ -432,6 +458,7 @@
         </div>
     </div>
 </footer>
+
 <div class="overlay overlay-boxify">
     <nav>
         <ul>

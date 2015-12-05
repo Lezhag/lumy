@@ -1,0 +1,74 @@
+.section-page {
+    display: flex;
+    background-color: $rose;
+    position: relative;
+    padding-top: u($header-height);
+    height: u(380px);
+    overflow: hidden;
+    z-index: z('head-wreath');
+    @media (min-width: $tabletLandscape) {
+        height: u(480px);
+    }
+}
+
+.section-textContainer {
+    display: none;
+    @media (min-width: $tabletLandscape) {
+        display: inline-block;
+        padding: u($section-topPadding-tablet 20px 0);
+        width: $section-tablet;
+    }
+    @media (min-width: $mediumDesktop) {
+        width: $section-medium;
+        padding: u($section-topPadding-medium 50px 0 25px);
+    }
+    @media (min-width: $largeScreen) {
+        padding: u($section-topPadding-large 100px 0 25px);
+    }
+    &:after {
+
+    }
+}
+.section-title {
+    line-height: 1.4em;
+    letter-spacing: .15em;
+    @include setFont($family: $sansHeadersFontFamily, $size: 35px);
+
+    @media (min-width: $mediumDesktop) {
+        @include setFont($family: $sansHeadersFontFamily, $size: 45px);
+    }
+}
+
+.section-content {
+    line-height: 1.6;
+    padding-right: u(20px);
+    @media (min-width: $mediumDesktop) {
+        line-height: 1.7;
+        padding-right: u(30px);
+    }
+    @media (min-width: $largeScreen) {
+        line-height: 1.9;
+        padding-right: u(40px);
+    }
+}
+
+.section-image {
+    height: inherit;
+    background: green;
+    margin-top: - u($header-height);
+    @media (min-width: $tabletLandscape) {
+        width: 100% - $section-tablet;
+        //margin-top: - u($section-topPadding-tablet);
+    }
+    @media (min-width: $mediumDesktop) {
+        //margin-top: - u($section-topPadding-medium);
+        width: 100% - $section-medium;
+    }
+    @media (min-width: $largeScreen) {
+       // margin-top: - u($section-topPadding-large);
+    }
+    //&:after, .&:before {
+    //    transition-delay: 0ms;
+    //    transform: translate(0, 0) translateZ(0) skew(-17deg, 0);
+    //}
+}

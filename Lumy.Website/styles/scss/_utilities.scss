@@ -1,0 +1,35 @@
+//taken from https://davidwalsh.name/rem-px-browser-function-sass
+
+$pixelBase: 16;  /* 1 */
+
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1); /* 2 */
+}
+
+@function u($values, $unit: rem) {     /* 3 */
+
+    $list: (); /* 4 */
+
+    @each $value in $values {         /* 5 */
+
+        @if (type-of($value) == "number") and ($value != 0) {             /* 6 */
+
+            $parsedUnit: unit($value); /* 7 */
+            $val: parseInt($value); /* 2 */
+
+            @if ($px-only) and ($parsedUnit == 'rem') {                /* 8 */
+                $list: append($list, ($val * $pixelBase) + px); /* 8 */
+            } @else if ($parsedUnit == 'rem') {                /* 9 */
+                $list: append($list, $value); /* 9 */
+            } @else if ($parsedUnit == 'px') {
+                $list: append($list, ($val / $pixelBase) + #{$unit});
+            } @else {
+                @warn 'There is no unit conversion for "#{$parsedUnit}"'; /* 10 */
+            }
+        } @else {
+            $list: append($list, $value); /* 11 */
+        }
+    }
+    @return $list; /* 12 */
+
+}

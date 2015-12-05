@@ -1,0 +1,21 @@
+/* ==========================================================================
+Waypoints
+========================================================================== */
+.wp1, .wp2, .wp3, .wp4, .wp5, .wp6 {
+    visibility: hidden;
+}
+
+.bounceInLeft, .bounceInRight, .bounceInDown,
+.fadeInUp, .fadeInUpDelay,
+.fadeInDown, .fadeInUpD,
+.fadeInLeft, .fadeInRight {
+    visibility: visible;
+}
+
+.delay-05s {
+    animation-delay: 0.5s;
+}
+
+.delay-1s {
+    animation-delay: 1s;
+}
