@@ -7,7 +7,7 @@
     overflow: hidden;
     z-index: z('head-wreath');
     @media (min-width: $tabletLandscape) {
-        height: u(480px);
+        height: u(450px);
     }
 }
 
@@ -54,8 +54,8 @@
 
 .section-image {
     height: inherit;
-    background: green;
     margin-top: - u($header-height);
+    width: 100%;
     @media (min-width: $tabletLandscape) {
         width: 100% - $section-tablet;
         //margin-top: - u($section-topPadding-tablet);
@@ -67,8 +67,32 @@
     @media (min-width: $largeScreen) {
        // margin-top: - u($section-topPadding-large);
     }
+    &:hover {
+        .section-buttons {
+            display: inline-block;
+        }
+    }
+    i {
+        position: absolute;
+        width: u(15px);
+        height: u(15px);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     //&:after, .&:before {
     //    transition-delay: 0ms;
     //    transform: translate(0, 0) translateZ(0) skew(-17deg, 0);
     //}
+}
+
+.section-buttons {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: z('section-buttons');
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 61, 83, 0.1);
 }

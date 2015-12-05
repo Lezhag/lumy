@@ -1,6 +1,10 @@
 .head-wreath {
     .section-image {
-        background: url('../images/gallery/thumbnails/wreath-small.jpg') no-repeat center center;
+        background: url('../images/gallery/sections/section-wreath.jpg') no-repeat center center;
         background-size: cover;
+        @media (min-width: $tabletLandscape ){
+            background: url('../images/gallery/sections/section-wreath.jpg') no-repeat center center;
+            background-size: cover;
+        }
     }
 }
