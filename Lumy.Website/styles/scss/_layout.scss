@@ -68,7 +68,7 @@
 .section-image {
     height: inherit;
     margin-top: - u($header-height);
-    width: inherit;
+    width: 100%;
     z-index: z('section-image');
     @media (min-width: $tabletLandscape) {
         width: 100% - $section-tablet;
@@ -88,18 +88,29 @@
         }
     }
     .icons {
-        display: flex;
-        font-size: 5.5em;
         position: absolute;
-        width: u(50px);
-        height: u(50px);
+        font-size: 5.5em;
         top: 50%;
-        left: 55%;
         transform: translate(-50%, -50%);
-        i {
-            padding-left: u(50px);
-            color: hsla(0.58, .14, 0.53, 0.5);
-        }
+        color: hsla(0.58, .14, 0.53, 0.5);
+    }
+}
+
+.icons-left {
+    left: 7%;
+}
+
+.icons-right {
+    right: 0%;
+    @media (min-width: $tabletLandscape) {
+        right: 10%;
+    }
+}
+
+.icons-center {
+    left: 52%;
+    @media (min-width: $tabletLandscape) {
+        left: 47%;
     }
 }
 
