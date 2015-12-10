@@ -120,7 +120,9 @@ Navigation
     @include setFont($size: 30px);
     color: $ocean-wave;
 }
+
 $lotus-dims: 35px;
+
 .lotus {
     display: inline-block;
     height: $lotus-dims;

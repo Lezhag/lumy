@@ -22,10 +22,10 @@ p {
 }
 
 a {
-    color: #73d0da;
+    color: $ocean-wave;
 
     &:hover, &:focus {
-        color: #73d0da;
+        color: $ocean-wave;
         text-decoration: none;
     }
 }
