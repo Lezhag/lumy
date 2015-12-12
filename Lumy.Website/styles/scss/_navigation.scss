@@ -111,7 +111,7 @@ Navigation
 }
 
 .menu-item {
-    &:hover {
+    &:hover, &:focus {
         opacity: 0.5;
     }
 }

@@ -94,7 +94,7 @@
     }
     @media (min-width: $largeScreen) {
     }
-    &:hover {
+    &:hover, &:focus {
         .image-overlay {
             opacity: 1;
             display: inline-block;

@@ -49,13 +49,13 @@
   transition: transform 300ms ease-in-out;
   cursor: pointer;
   z-index: z('menu-flower');
-  &:hover {
+  &:hover, &:focus {
     transform: rotate(85deg);
   }
   &.js-close {
     background: url('../images/flower-violet-close.png') no-repeat;
     background-size: 100%;
-    &:hover {
+    &:hover, &:focus {
       transform: none;
     }
   }
