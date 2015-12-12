@@ -168,18 +168,17 @@ blockquote .logo-quote {
 Showcase
 ========================================================================== */
 .showcase {
-    background: url('../img/showcase-bg-fixed-01.jpg') no-repeat center center fixed;
+    background: url('../images/gallery/sections/section-stand.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 .showcase h1 {
-    margin: 0 0 20px 0;
-    color: #fff;
-    font-weight: 400;
-    font-size: 22px;
+    margin: u(0 0 20px 0);
+    color: $white;
 }
 .showcase p {
-    margin-bottom: 25px;
-    color: #fff;
+    margin-bottom: u(25px);
+    line-height: 1.9;
+    color: $white;
 }
 .device {
     position: absolute;
@@ -187,7 +186,7 @@ Showcase
     left: 20%;
     min-height: 676px;
     width: 359px;
-    background: url('../img/iphone-skeleton.png') no-repeat center center;
+    background: url('../images/iphone-skeleton.png') no-repeat center center;
 }
 .device-content {
     position: absolute;

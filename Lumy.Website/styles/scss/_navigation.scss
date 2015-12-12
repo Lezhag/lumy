@@ -9,7 +9,7 @@ Navigation
 .main-menu {
     transition: 550ms ease-in-out;
     position: fixed;
-    top: 0;
+    top: 8px;
     left: 0;
     z-index: z('main-menu');
     width: 100%;
@@ -38,7 +38,7 @@ Navigation
 
     .menu-items {
         width: 65%;
-        margin: auto;
+        margin: 0.5em auto;
     }
 
     .menu-image {
@@ -85,7 +85,7 @@ Navigation
     .page-header-social {
         display: block;
         opacity: 0;
-        margin-top: 1.5em;
+        margin-top: 1em;
         transition: opacity .4s ease .9s;
         @media screen and (min-width: $tabletLandscape) {
             display: none;
@@ -99,7 +99,7 @@ Navigation
     .menu-items li {
         transform: translateX(0);
         opacity: 1;
-        margin: 24px auto;
+        margin: 1em auto;
     }
     .page-header-social {
         opacity: 1;
@@ -117,18 +117,24 @@ Navigation
 }
 
 .menu-item-text {
-    @include setFont($size: 30px);
     color: $ocean-wave;
+    @include setFont($size: 16px);
+    @media (min-width: $tabletLandscape) {
+        @include setFont($size: 22px);
+    }
+    @media (min-width: $mediumDesktop) {
+        @include setFont($size: 30px);
+    }
 }
 
 $lotus-dims: 35px;
 
 .lotus {
     display: inline-block;
-    height: $lotus-dims;
-    width: $lotus-dims;
+    height: u($lotus-dims);
+    width: u($lotus-dims);
     background: $rose url('../images/lotus.png') no-repeat 0 100%;
-    background-size: $lotus-dims;
+    background-size: u($lotus-dims);
 }
 
 

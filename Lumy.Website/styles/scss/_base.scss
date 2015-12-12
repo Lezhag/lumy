@@ -29,7 +29,7 @@ html, body {
 */
 body {
     margin: 0;
-    @include setFont($family: $sansCopyFontFamily);
+    @include setFont($family: $sansCopyFontFamily, $size: 16px);
 }
 
 /*

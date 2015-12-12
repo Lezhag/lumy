@@ -5,7 +5,7 @@
     padding-top: u($header-height);
     height: u(380px);
     overflow: hidden;
-    z-index: z('head-wreath');
+    z-index: z('section-page');
     @media (min-width: $tabletLandscape) {
         height: u(450px);
     }
@@ -29,7 +29,6 @@
         @media (min-width: $tabletLandscape) {
             content: '';
             position: absolute;
-            right: u(150px);
             top: 0;
             height: 100%;
             width: inherit;
@@ -41,6 +40,23 @@
         }
     }
 }
+
+.textContainer-right {
+    &:before {
+        @media (min-width: $tabletLandscape) {
+            right: u(150px);
+        }
+    }
+}
+
+.textContainer-left {
+    &:before {
+        @media (min-width: $tabletLandscape) {
+            left: u(94px);
+        }
+    }
+}
+
 .section-title {
     line-height: 1.4em;
     letter-spacing: .15em;
@@ -72,17 +88,14 @@
     z-index: z('section-image');
     @media (min-width: $tabletLandscape) {
         width: 100% - $section-tablet;
-        //margin-top: - u($section-topPadding-tablet);
     }
     @media (min-width: $mediumDesktop) {
-        //margin-top: - u($section-topPadding-medium);
         width: 100% - $section-medium;
     }
     @media (min-width: $largeScreen) {
-       // margin-top: - u($section-topPadding-large);
     }
     &:hover {
-        .section-buttons {
+        .image-overlay {
             opacity: 1;
             display: inline-block;
         }
@@ -92,18 +105,26 @@
         font-size: 5.5em;
         top: 50%;
         transform: translate(-50%, -50%);
-        color: hsla(0.58, .14, 0.53, 0.5);
+        //color: $white;
+        color: hsla(360, 100%, 100%, 0.8);
     }
 }
 
 .icons-left {
-    left: 7%;
-}
+     left: 7%;
+     .overlay-right & {
+         @media (min-width: $tabletLandscape) {
+             left: 24%;
+         }
+     }
+ }
 
 .icons-right {
-    right: 0%;
-    @media (min-width: $tabletLandscape) {
-        right: 10%;
+    right: 0;
+    .overlay-left & {
+        @media (min-width: $tabletLandscape) {
+            right: 10%;
+        }
     }
 }
 
@@ -111,17 +132,30 @@
     left: 52%;
     @media (min-width: $tabletLandscape) {
         left: 47%;
+        .overlay-right & {
+            left: 60%;
+        }
+    }
+    @media (min-width: $mediumDesktop) {
+        left: 47%;
     }
 }
 
-.section-buttons {
+.image-overlay {
     opacity: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    z-index: z('section-buttons');
+    z-index: z('image-overlay');
     width: inherit;
     height: 100%;
     background-color: rgba(42, 61, 83, 0.1);
     transition: opacity 300ms ease-in-out;
+}
+
+.overlay-right {
+    right: 0;
+}
+
+.overlay-left {
+    left: 0;
 }
