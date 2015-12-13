@@ -20,7 +20,16 @@
     <script src="init/modernizr.custom.js"></script>
 
     <link rel="stylesheet" href="css/vendor.min.e48b4dcb.css" />
-    <link rel="stylesheet" href="css/main.min.49852f4d.css" />
+
+    <!--[if gt IE 8 | IEMobile] ><!-->
+        <link rel="stylesheet" href="css/main.min.6ac5afc6.css" />
+    <!--<![endif]-->
+
+    <!--&lt;!&ndash;[if lt IE 9 & !IEMobile]>-->
+        <!--&lt;!&ndash; build:css css/main-ie.min.css &ndash;&gt;-->
+        <!--<link rel="stylesheet" href="styles/main-ie.css"/>-->
+        <!--&lt;!&ndash; endbuild &ndash;&gt;-->
+    <!--<![endif]&ndash;&gt;-->
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!--Google webfonts-->
@@ -45,152 +54,273 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body dir="rtl">
+<body dir="rtl" class="home">
+<!--facebook intergration-->
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
 <![endif]-->
 <!-- open/close -->
 <header class="page-header">
     <div class="header-content">
-        <a href="" class="header-logo"></a>
-        <span class="menu-title">תפריט</span>
-        <a href="" class="menu-flower"></a>
+        <a href="#frontPage" class="header-logo"></a>
+        <a class="menu-toggler">
+            <div class="menu-title">תפריט</div>
+            <div class="menu-flower"></div>
+        </a>
+        <nav class="main-menu">
+            <div class="menu-content">
+                <ul class="menu-items">
+                    <li>
+                        <a href="#about" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">אודות לומי</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#head-wreath" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">זרים לראש</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#brides-bouquet" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">זרי כלה</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#flower-stand" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">עמדת שזירת פרחים</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#arrangements" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">סידורי פרחים</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#workshop" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">סדנת שזירת תכשיטי פרחים למסיבות</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">צמידים/קורסאז' פרחים</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">תגובות</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contactUs" class="menu-item">
+                            <span class="lotus"></span>
+                            <span class="menu-item-text">יצירת קשר</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-image"></div>
+        </nav>
     </div>
 </header>
-<section class="frontPage">
+
+<section id='frontPage' class="frontPage">
     <div class="texture-overlay"></div>
-    <div class="container">
-        <div class="row nav-wrapper">
-            <div class="col-md-6 col-sm-6 col-xs-6 text-right pull-right">
-                <a href="#"><img class="lumy-logo" src="images/lumy-logo-bkg.png" alt="Lumy Logo"></a>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-6 text-left navicon pull-right">
-                <p class="navicon-content">תפריט</p><a id="trigger-overlay" class="nav_slide_button nav-toggle"
-                                                       href="#"><span class="nav-span"></span></a>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-12 pull-right text-right">
-                <h1 class="animated fadeInDown tagline">לומי - עמדת שזירת תכשיטי פרחים לאירועים יחודיים</h1>
-                <a href="#contactUs" class="use-btn animated fadeInUp copy-font">ליצור קשר<i class="fa fa-envelope-o"></i></a>
-                <a href="#about" class="learn-btn animated fadeInUp copy-font">קצת על לומי
-                    <i class="fa fa-arrow-down"></i>
+                <div class="container">
+                    <h1 class="animated fadeInDown tagline">לומי - עמדת שזירת תכשיטי פרחים לאירועים
+                        יחודיים</h1>
+                    <a href="#contactUs" class="use-btn animated fadeInUp copy-font"><i class="fa fa-envelope-o"></i>יצירת קשר</a>
+                    <a href="#about" class="learn-btn animated fadeInUp copy-font"><i class="fa fa-arrow-down"></i>אודות לומי
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--<section id="about" class="video" >-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-12 text-center">-->
+                <!--<h1><a href="http://www.youtube.com/embed/9No-FiEInLA?autoplay=1&wmode=opaque&fs=1"-->
+                       <!--class="youtube-media"><i class="fa fa-play-circle-o"></i> Watch the Video</a></h1>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+
+<section id="head-wreath" class="section-page head-wreath">
+    <div class="section-textContainer textContainer-right">
+        <h1 class="section-title">זרים לראש</h1>
+
+        <div class="section-content">
+            אצלנו בלומי אוהבים את הרעיון של כתר מפרחים חיים לראש. זה יותר יפה מכתר מאבני חן או יהלומים – ונותן מראה טבעי
+            ונקי לבעלת האירוע ומשמח את האורחים. אפשר גם לייבש ולשמור את הזר לראש כמזכרת.
+        </div>
+    </div>
+    <div class="section-image">
+        <div class="image-overlay overlay-left">
+                <a href="#contactUs">
+                    <i class="icons icons-center fa fa-phone" title="יצירת קשר"></i>
                 </a>
-            </div>
+                <span class="head-wreath-gallery">
+                    <a href="images/gallery/wreath.jpg">
+                        <i class="icons icons-right fa fa-chevron-right" title="תמונות נוספות"></i>
+                        <i class="icons icons-left fa fa-chevron-left" title="תמונות נוספות"></i>
+                    </a>
+                    <a href="images/gallery/bubbles-girl.jpg" title="בועות" ></a>
+                </span>
         </div>
     </div>
 </section>
-<section class="video" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h1><a href="http://www.youtube.com/embed/9No-FiEInLA?autoplay=1&wmode=opaque&fs=1"
-                       class="youtube-media"><i class="fa fa-play-circle-o"></i> Watch the Video</a></h1>
-            </div>
+
+<section id="brides-bouquet" class="section-page brides-bouquet">
+    <div class="section-image">
+        <div class="image-overlay overlay-right">
+            <a href="#contactUs">
+                <i class="icons icons-center fa fa-phone" title="יצירת קשר"></i>
+            </a>
+                <span class="brides-bouquet-gallery">
+                    <a href="images/gallery/bouquet-01.jpg">
+                        <i class="icons icons-right fa fa-chevron-right" title="תמונות נוספות"></i>
+                        <i class="icons icons-left fa fa-chevron-left" title="תמונות נוספות"></i>
+                    </a>
+                    <a href="images/gallery/bouquet-02.jpg" title="זר כלה"></a>
+                    <a href="images/gallery/bouquet-03.jpg" title="זר כלה"></a>
+                </span>
+        </div>
+    </div>
+    <div class="section-textContainer textContainer-left">
+        <h1 class="section-title">זרי כלה</h1>
+        <div class="section-content">
+            הכלות של לומי מרוצות. בלומי יוצרים זרי כלה מוקפדים מפרחים טריים וחומרי גלם איכותיים המותאמים לאופי האירוע
+            וטעמך האישי. מטרתנו ליצור עבורך את הזר שאליו את משתוקקת ומבטיחים ללוות את תהליך הבחירה ביעוץ, ההקשבה וסבלנות
         </div>
     </div>
 </section>
-<section class="features-intro">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 nopadding features-intro-img">
-                <div class="features-bg">
-                    <div class="texture-overlay"></div>
-                    <div class="features-img wp1">
-                        <img src="img/html5-logo.png" alt="HTML5 Logo">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 nopadding">
-                <div class="features-slider">
-                    <ul class="slides" id="featuresSlider">
-                        <li>
-                            <h1>The Fore-front of Design &amp; Technology</h1>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus.</p>
+<!--<section class="features-intro">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-6 nopadding features-intro-img">-->
+                <!--<div class="features-bg">-->
+                    <!--<div class="texture-overlay"></div>-->
+                    <!--<div class="features-img wp1">-->
+                        <!--<img src="img/html5-logo.png" alt="HTML5 Logo">-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-6 nopadding">-->
+                <!--<div class="features-slider">-->
+                    <!--<ul class="slides" id="featuresSlider">-->
+                        <!--<li>-->
+                            <!--<h1>The Fore-front of Design &amp; Technology</h1>-->
 
-                            <p><a href="#features" class="arrow-btn">Find out why this freebie rocks! <i
-                                    class="fa fa-long-arrow-right"></i></a></p>
-                        </li>
-                        <li>
-                            <h1>Multi-Purpose User Centric Design</h1>
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum-->
+                                <!--consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum-->
+                                <!--primis in faucibus.</p>-->
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus.</p>
+                            <!--<p><a href="#features" class="arrow-btn">Find out why this freebie rocks! <i-->
+                                    <!--class="fa fa-long-arrow-right"></i></a></p>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<h1>Multi-Purpose User Centric Design</h1>-->
 
-                            <p><a href="http://tympanus.net/codrops/?p=22554" class="arrow-btn">Find out why this
-                                freebie rocks! <i class="fa fa-long-arrow-right"></i></a></p>
-                        </li>
-                        <li>
-                            <h1>Made with Love, Released for Free</h1>
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum-->
+                                <!--consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum-->
+                                <!--primis in faucibus.</p>-->
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus.</p>
+                            <!--<p><a href="http://tympanus.net/codrops/?p=22554" class="arrow-btn">Find out why this-->
+                                <!--freebie rocks! <i class="fa fa-long-arrow-right"></i></a></p>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<h1>Made with Love, Released for Free</h1>-->
 
-                            <p><a href="http://tympanus.net/codrops/?p=22554" class="arrow-btn">Find out why this
-                                freebie rocks! <i class="fa fa-long-arrow-right"></i></a></p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="features-list" id="features">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum-->
+                                <!--consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum-->
+                                <!--primis in faucibus.</p>-->
 
-                <div class="col-md-4 feature-1 wp2">
-                    <div class="feature-icon">
-                        <i class="fa fa-desktop"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h1>Responsive</h1>
+                            <!--<p><a href="http://tympanus.net/codrops/?p=22554" class="arrow-btn">Find out why this-->
+                                <!--freebie rocks! <i class="fa fa-long-arrow-right"></i></a></p>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
 
-                        <p>Built using HTML5/CSS3 and jQuery, and built using one of the world's most powerful CSS
-                            frameworks available, Bootstrap.</p>
-                        <a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i
-                                class="fa fa-chevron-circle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 feature-2 wp2 delay-05s">
-                    <div class="feature-icon">
-                        <i class="fa fa-flash"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h1>Multi-Purpose</h1>
+<!--<section class="features-list" id="features">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-12">-->
 
-                        <p>Perfect if you run your own start-up, product or service. Boxify can showcase your business
-                            converting your visits to income.</p>
-                        <a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i
-                                class="fa fa-chevron-circle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4 feature-3 wp2 delay-1s">
-                    <div class="feature-icon">
-                        <i class="fa fa-heart"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h1>Absolutely Free</h1>
+                <!--<div class="col-md-4 feature-1 wp2">-->
+                    <!--<div class="feature-icon">-->
+                        <!--<i class="fa fa-desktop"></i>-->
+                    <!--</div>-->
+                    <!--<div class="feature-content">-->
+                        <!--<h1>Responsive</h1>-->
 
-                        <p>As aways, download Boxify for free exclusively from Codrops. If you love Boxify and want to
-                            thank me, simply <a href="http://peterfinlan.com/">buy me a beer</a>. </p>
-                        <a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i
-                                class="fa fa-chevron-circle-right"></i></a>
-                    </div>
-                </div>
+                        <!--<p>Built using HTML5/CSS3 and jQuery, and built using one of the world's most powerful CSS-->
+                            <!--frameworks available, Bootstrap.</p>-->
+                        <!--<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i-->
+                                <!--class="fa fa-chevron-circle-right"></i></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-4 feature-2 wp2 delay-05s">-->
+                    <!--<div class="feature-icon">-->
+                        <!--<i class="fa fa-flash"></i>-->
+                    <!--</div>-->
+                    <!--<div class="feature-content">-->
+                        <!--<h1>Multi-Purpose</h1>-->
 
-            </div>
-        </div>
-    </div>
-</section>
-<section class="showcase">
+                        <!--<p>Perfect if you run your own start-up, product or service. Boxify can showcase your business-->
+                            <!--converting your visits to income.</p>-->
+                        <!--<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i-->
+                                <!--class="fa fa-chevron-circle-right"></i></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-4 feature-3 wp2 delay-1s">-->
+                    <!--<div class="feature-icon">-->
+                        <!--<i class="fa fa-heart"></i>-->
+                    <!--</div>-->
+                    <!--<div class="feature-content">-->
+                        <!--<h1>Absolutely Free</h1>-->
+
+                        <!--<p>As aways, download Boxify for free exclusively from Codrops. If you love Boxify and want to-->
+                            <!--thank me, simply <a href="http://peterfinlan.com/">buy me a beer</a>. </p>-->
+                        <!--<a href="http://tympanus.net/codrops/?p=22554" class="read-more-btn">Read More <i-->
+                                <!--class="fa fa-chevron-circle-right"></i></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+
+<section id="flower-stand" class="showcase">
     <div class="showcase-wrap">
         <div class="texture-overlay"></div>
         <div class="container">
@@ -215,11 +345,11 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h1>Showcase your Product or Service</h1>
+                    <h1 class="section-title">עמדת שזירת פרחים</h1>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                        consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in
-                        faucibus.</p>
+                    <p>לומי תהפוך כל אירוע לחוויה צבעונית וחגיגית על ידי הקמת עמדה מרהיבה בפרחים, שבה אנו שוזרות עם חיוך
+                        ואהבה מגוון מתנות מרגשות ליקיריהם. הפרחים מהם ניצור הינם טריים מסגנון המתואם לאופי האירוע ולטעמך
+                        האישי.</p>
                     <blockquote class="team-quote">
                         <div class="avatar"><img src="img/avatar.png" alt="User Avatar"></div>
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
@@ -237,21 +367,155 @@
         </div>
     </div>
 </section>
-<section class="screenshots-intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Packed Full of Powerful Features</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut
-                    sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+<section id="arrangements" class="section-page arrangements">
+    <div class="section-textContainer textContainer-right">
+        <h1 class="section-title">סידורי פרחים</h1>
 
-                <p><a href="#screenshots" class="arrow-btn">See the screenshots! <i class="fa fa-long-arrow-right"></i></a>
-                </p>
+        <div class="section-content">
+            לומי דואגת להבדיל את האירוע שלך מכל אירוע אחר על ידי שזירת סידורי פרחים בהתאם להווי האירוע ובהרמונית צבעים
+            שלא תשאיר אף אורח אדיש. הסידורים שלנו מורכבים מפרחים טריים בשיא פריחתם.
+        </div>
+    </div>
+    <div class="section-image">
+        <div class="image-overlay overlay-left">
+            <a href="#contactUs">
+                <i class="icons icons-center fa fa-phone" title="יצירת קשר"></i>
+            </a>
+                <span class="arrangements-gallery">
+                    <a href="images/gallery/flower-arrangement.jpg">
+                        <i class="icons icons-right fa fa-chevron-right" title="תמונות נוספות"></i>
+                        <i class="icons icons-left fa fa-chevron-left" title="תמונות נוספות"></i>
+                    </a>
+                    <a href="images/gallery/bubbles-girl.jpg" title="בועות" ></a>
+                </span>
+        </div>
+    </div>
+</section>
+
+<section id="workshop" class="section-page workshop">
+    <div class="section-image">
+        <div class="image-overlay overlay-right">
+            <a href="#contactUs">
+                <i class="icons icons-center fa fa-phone" title="יצירת קשר"></i>
+            </a>
+                <span class="workshop-gallery">
+                    <a href="images/gallery/bouquet-01.jpg">
+                        <i class="icons icons-right fa fa-chevron-right" title="תמונות נוספות"></i>
+                        <i class="icons icons-left fa fa-chevron-left" title="תמונות נוספות"></i>
+                    </a>
+                    <a href="images/gallery/bouquet-02.jpg" title="זר כלה"></a>
+                    <a href="images/gallery/bouquet-03.jpg" title="זר כלה"></a>
+                </span>
+        </div>
+    </div>
+    <div class="section-textContainer textContainer-left">
+        <h1 class="section-title">סדנת שזירה למסיבות</h1>
+
+        <div class="section-content">
+            חוויה קבוצתית סוחפת בשלל צבעים ויצירתיות שבמהלכה נלמד ונתנסה בשזירת תכשיטים ממגוון סוגי פרחים טריים וחומרי
+            גלם איכותיים. אורך הסדנא כשעה וחצי שבתחילתה נפנק את נסיכת האירוע במתנה ונסיים, כאשר כל הבנות מרוצות מקושטות,
+            צבעוניות ומצוידות בתמונות.
+        </div>
+    </div>
+</section>
+
+<section id="accessories" class="accessories">
+    <div class="showcase-wrap">
+        <div class="texture-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="section-title">עמדת שזירת פרחים</h1>
+
+                    <p>לומי תהפוך כל אירוע לחוויה צבעונית וחגיגית על ידי הקמת עמדה מרהיבה בפרחים, שבה אנו שוזרות עם חיוך
+                        ואהבה מגוון מתנות מרגשות ליקיריהם. הפרחים מהם ניצור הינם טריים מסגנון המתואם לאופי האירוע ולטעמך
+                        האישי.</p>
+                    <blockquote class="team-quote">
+                        <div class="avatar"><img src="img/avatar.png" alt="User Avatar"></div>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
+                            consequat ut sed sem. Duis quis tempor nunc." - Peter Finlan</p>
+
+                        <div class="logo-quote">
+                            <a href="http://tympanus.net/codrops/"><img src="img/codrops-logo.png"
+                                                                        alt="Codrops Logo"></a>
+                        </div>
+                    </blockquote>
+                    <a href="http://tympanus.net/codrops/?p=22554" class="download-btn">Download! <i
+                            class="fa fa-download"></i></a>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<section id="corsage" class="section-page corsage">
+    <div class="section-textContainer textContainer-right">
+        <h1 class="section-title">קורסאז' פרחים</h1>
+
+        <div class="section-content">
+            לומי דואגת לרומנטיים שבינכם לאפשר להפתיע במחווה ייחודית את בת הזוג לרגל יום אהבה, נשף סיום או כל יום מיוחד.
+            הצמיד נשזר מפרחים טריים מלבלבים ובהרמונית צבעים שתעשה כל בחורה מאושרת.
+        </div>
+    </div>
+    <div class="section-image">
+        <div class="image-overlay overlay-left">
+            <a href="#contactUs">
+                <i class="icons icons-center fa fa-phone" title="יצירת קשר"></i>
+            </a>
+                <span class="arrangements-gallery">
+                    <a href="images/gallery/flower-arrangement.jpg">
+                        <i class="icons icons-right fa fa-chevron-right" title="תמונות נוספות"></i>
+                        <i class="icons icons-left fa fa-chevron-left" title="תמונות נוספות"></i>
+                    </a>
+                    <a href="images/gallery/bubbles-girl.jpg" title="בועות" ></a>
+                </span>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section-page about">
+    <div class="section-image">
+        <div class="image-overlay overlay-right">
+            <a href="#contactUs">
+                <i class="icons icons-center fa fa-phone" title="יצירת קשר"></i>
+            </a>
+                <span class="workshop-gallery">
+                    <a href="images/gallery/bouquet-01.jpg">
+                        <i class="icons icons-right fa fa-chevron-right" title="תמונות נוספות"></i>
+                        <i class="icons icons-left fa fa-chevron-left" title="תמונות נוספות"></i>
+                    </a>
+                    <a href="images/gallery/bouquet-02.jpg" title="זר כלה"></a>
+                    <a href="images/gallery/bouquet-03.jpg" title="זר כלה"></a>
+                </span>
+        </div>
+    </div>
+    <div class="section-textContainer textContainer-left">
+        <h1 class="section-title">אודות לומי</h1>
+
+        <div class="section-content">
+            מטרת חברת לומי – להפוך כל אירוע לחוויה צבעונית וחגיגית על ידי הקמת עמדה מרהיבה, שבה אנו שוזרות עם חיוך ואהבה
+            מגוון מתנות מרגשות. אנחנו שואפים לעמוד בסטנדרטים הגבוהים ביותר של איכות תוך תשומת לב להעדפות של קהל
+            לקוחותינו.
+        </div>
+    </div>
+</section>
+<!--<section class="screenshots-intro">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-12">-->
+                <!--<h1>Packed Full of Powerful Features</h1>-->
+
+                <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut-->
+                    <!--sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>-->
+
+                <!--<p><a href="#screenshots" class="arrow-btn">See the screenshots! <i class="fa fa-long-arrow-right"></i></a>-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+
 <section class="screenshots" id="screenshots">
     <div class="popup-gallery">
         <div class="row">
@@ -337,17 +601,39 @@
                     <!--</figure>-->
                 <!--</li>-->
 </section>
+
 <section class="contactUs" id="contactUs">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center wp4">
-                <h1 class="contactUs-title">Seen Enough?</h1>
-                <a href="http://tympanus.net/codrops/?p=22554" class="download-btn">Download! <i
-                        class="fa fa-download"></i></a>
+                <h1 class="section-title contactUs-title">יצירת קשר</h1>
+
+                <div class="contactUs-phone">
+                    <a href="tel: +972-523430632">טלפנו עכשיו!
+                        <br/>
+                        <span class="phone-number">052-3430632</span>
+
+                        <div class="phone"></div>
+                    </a>
+                    <br/>
+                </div>
+                <h1 class="section-title contactUs-title">
+                    <a href="https://www.facebook.com/לומי-עמדת-שזירת-פרחים-470756539624499/">
+                        ביקרו בפייסבוק שלנו
+                    </a></h1>
+
+                <div class="fb-page"
+                     data-href="https://www.facebook.com/%D7%9C%D7%95%D7%9E%D7%99-%D7%A2%D7%9E%D7%93%D7%AA-%D7%A9%D7%96%D7%99%D7%A8%D7%AA-%D7%A4%D7%A8%D7%97%D7%99%D7%9D-470756539624499"
+                     data-height="450"
+                     data-width="500"
+                     data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                     data-hide-cover="false" data-show-facepile="true">
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 <footer>
     <div class="container">
         <div class="row">
@@ -370,6 +656,7 @@
         </div>
     </div>
 </footer>
+
 <div class="overlay overlay-boxify">
     <nav>
         <ul>
@@ -388,7 +675,7 @@
 
 <script src="scripts/vendor.min.bf54c8e4.js"></script>
 
-<script src="scripts/main.min.ced2c392.js"></script>
+<script src="scripts/main.min.ab60ceeb.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
