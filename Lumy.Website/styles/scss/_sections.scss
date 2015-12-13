@@ -26,7 +26,26 @@
     }
 }
 
-.showcase {
-    background: url('../images/gallery/sections/section-stand01.jpg') no-repeat center center fixed;
+.about {
+    .section-image {
+        background: url('../images/gallery/sections/section-about.jpg') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.corsage {
+    .section-image {
+        background: url('../images/gallery/sections/section-corsage.jpg') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.showcase-01 {
+    background: url('../images/gallery/sections/basket-02.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.showcase-02 {
+    background: url('../images/gallery/sections/lumy-horse.jpg') no-repeat center center fixed;
     background-size: cover;
 }
