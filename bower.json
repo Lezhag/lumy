@@ -1,5 +1,5 @@
 {
-  "name": "lumy-onepager",
+  "name": "lumy-profile",
   "version": "1.0.0",
   "homepage": "https://www.lumy.com",
   "authors": [
@@ -17,6 +17,7 @@
     "fitvids": "1.1.0",
     "retina.js": "1.3.0",
     "magnific-popup": "1.0.0",
-    "flexboxgrid": "6.3.0"
+    "flexboxgrid": "6.3.0",
+    "slick-carousel" : "1.5.9"
   }
 }

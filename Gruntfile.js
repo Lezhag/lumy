@@ -50,7 +50,8 @@ module.exports = function (grunt) {
                         '<%= app.bower %>/fancybox/source/*.css', '!<%= app.bower %>/fancybox/source/*.min.css',
                         '<%= app.node %>/animate.css/*.css', '!<%= app.node %>/animate.css/*.min.css',
                         '<%= app.bower %>/magnific-popup/dist/*.css', '!<%= app.bower %>/magnific-popup/dist/*.min.css',
-                        '<%= app.bower %>/flexboxgrid/dist/*.css', '!<%= app.bower %>/flexboxgrid/dist/*.min.css'
+                        '<%= app.bower %>/flexboxgrid/dist/*.css', '!<%= app.bower %>/flexboxgrid/dist/*.min.css',
+                        '<%= app.bower %>/slick-carousel/slick/*.scss'//, '!<%= app.bower %>/slick-carousel/slick/*.min.scss'
                     ],
                     dot: true,
                     flatten: true,
@@ -71,7 +72,8 @@ module.exports = function (grunt) {
                         '<%= app.bower %>/retina.js/src/retina.js',
                         '<%= app.node %>/waypoints/lib/noframework.waypoints.js',
                         '<%= app.bower %>/bootstrap/dist/js/bootstrap.js',
-                        '<%= app.bower %>/magnific-popup/dist/jquery.magnific-popup.js'
+                        '<%= app.bower %>/magnific-popup/dist/jquery.magnific-popup.js',
+                        '<%= app.bower %>/slick-carousel/slick/slick.js'
                     ],
                     dot: true,
                     flatten: true,
@@ -106,9 +108,9 @@ module.exports = function (grunt) {
                 nonull: true,
                 expand: true,
                 filter: 'isFile',
-                cwd: '<%= app.src %>/fonts',
+                cwd: '<%= app.cssDir %>/fonts',
                 src: ['**'],
-                dest: '<%= app.dist %>/fonts/'
+                dest: '<%= app.dist %>/css/fonts/'
             }
         },
 
@@ -168,7 +170,7 @@ module.exports = function (grunt) {
                 '<%= app.dist %>/scripts/main.*',
                 '<%= app.dist %>/init/*.*',
                 '<%= app.dist %>/images/**',
-                '<%= app.dist %>/fonts/**'
+                '<%= app.dist %>/css/fonts/**'
             ]
         },
 

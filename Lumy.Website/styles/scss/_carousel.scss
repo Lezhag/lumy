@@ -1,0 +1,28 @@
+/**
+ * Created by Oleg on 16/12/2015.
+ */
+.hero {
+    min-height: 100%;
+    min-width: 100%;
+}
+.hero-image {
+    @media (min-width: $largeScreen) {
+        min-height: 1100px;
+    }
+    min-height: 830px;
+    width: 100%;
+}
+.image01 {
+    background: url('../images/gallery/table-01.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.image02 {
+    background: url('../images/gallery/table-02.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.image03 {
+    background: url('../images/gallery/table-03.jpg') no-repeat center center;
+    background-size: cover;
+}
