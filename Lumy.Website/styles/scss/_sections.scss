@@ -1,51 +1,70 @@
 .brides-bouquet {
     .section-image {
-        background: url('../images/gallery/sections/section-bouquet.jpg') no-repeat center center;
-        background-size: cover;
+        background-image: url('../images/gallery/sections/section-bouquet.jpg');
     }
 }
 
 .arrangements {
     .section-image {
-        background: url('../images/gallery/sections/section-arrangement.jpg') no-repeat center center;
-        background-size: cover;
+        background-image: url('../images/gallery/sections/section-arrangement.jpg');
     }
 }
 
 .head-wreath {
     .section-image {
-        background: url('../images/gallery/sections/section-wreath.jpg') no-repeat center center;
-        background-size: cover;
+        background-image: url('../images/gallery/sections/section-wreath.jpg');
     }
 }
 
 .workshop {
     .section-image {
-        background: url('../images/gallery/sections/section-workshop.jpg') no-repeat center center;
-        background-size: cover;
+        background-image: url('../images/gallery/sections/section-workshop.jpg');
     }
 }
 
 .about {
     .section-image {
-        background: url('../images/gallery/sections/section-about.jpg') no-repeat center center;
-        background-size: cover;
+        background-image: url('../images/gallery/sections/section-about.jpg');
     }
 }
 
 .corsage {
     .section-image {
-        background: url('../images/gallery/sections/section-corsage.jpg') no-repeat center center;
-        background-size: cover;
+        background-image: url('../images/gallery/sections/section-corsage.jpg');
     }
 }
 
 .showcase-01 {
-    background: url('../images/gallery/sections/basket-02.jpg') no-repeat center center fixed;
+    background: url('../images/gallery/sections/basket-02.jpg') center center no-repeat fixed;
     background-size: cover;
 }
 
 .showcase-02 {
-    background: url('../images/gallery/sections/lumy-horse.jpg') no-repeat center center fixed;
+    background: url('../images/gallery/sections/lumy-horse_1400.jpg') center center no-repeat fixed;
     background-size: cover;
+}
+
+.showcase-02 {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    @media only screen and (max-width: 500px) {
+        background-image: url("../images/gallery/sections/lumy-horse_750.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 501px) and (max-width: 820px) {
+        background-image: url("../images/gallery/sections/lumy-horse_820.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 821px) and (max-width: 1000px) {
+        background-image: url("../images/gallery/sections/lumy-horse_1000.jpg");
+    }
+
+    @media screen and (min-width: 1001px) {
+        background-image: url("../images/gallery/sections/lumy-horse_1400.jpg");
+    }
 }

@@ -7,9 +7,9 @@ $(document).ready(function () {
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        centerMode: true,
-        adaptiveHeight: true,
-        variableWidth: true,
+        //centerMode: true,
+        //adaptiveHeight: true,
+        //variableWidth: true,
         rtl: true
     });
 });

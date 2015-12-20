@@ -51,7 +51,7 @@ module.exports = function (grunt) {
                         '<%= app.node %>/animate.css/*.css', '!<%= app.node %>/animate.css/*.min.css',
                         '<%= app.bower %>/magnific-popup/dist/*.css', '!<%= app.bower %>/magnific-popup/dist/*.min.css',
                         '<%= app.bower %>/flexboxgrid/dist/*.css', '!<%= app.bower %>/flexboxgrid/dist/*.min.css',
-                        '<%= app.bower %>/slick-carousel/slick/*.scss'//, '!<%= app.bower %>/slick-carousel/slick/*.min.scss'
+                        '<%= app.bower %>/slick-carousel/slick/slick.scss'//, '!<%= app.bower %>/slick-carousel/slick/*.min.scss'
                     ],
                     dot: true,
                     flatten: true,

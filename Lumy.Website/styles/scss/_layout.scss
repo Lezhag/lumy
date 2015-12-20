@@ -86,6 +86,10 @@
     margin-top: - u($header-height);
     width: 100%;
     z-index: z('section-image');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
     @media (min-width: $tabletLandscape) {
         width: 100% - $section-tablet;
     }
