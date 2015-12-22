@@ -1,10 +1,6 @@
 /* ==========================================================================
 Front page cover
 ========================================================================== */
-#home {
-  width: 100%;
-  height: 100%;
-}
 
 .frontPage {
   position: relative;
@@ -20,19 +16,4 @@ Front page cover
   height: 100%;
 }
 
-.tagline {
-  margin: 100px 0 45px 0;
-  letter-spacing: .1em;
-  @include setFont($family: $sansHeadersFontFamily, $size: 35px);
-  @media (min-width: $tabletLandscape) {
 
-    @include setFont($family: $sansHeadersFontFamily, $size: 45px);
-  }
-  @media (min-width: $mediumDesktop) {
-    @include setFont($family: $sansHeadersFontFamily, $size: 50px);
-  }
-}
-
-header i {
-  margin-left: 5px;
-}

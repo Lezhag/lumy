@@ -1,6 +1,35 @@
 /**
  * Created by Oleg on 16/12/2015.
  */
+.align-middle {
+    position: absolute;
+    top: 30%;
+    margin-right: u(150px);
+}
+
+.hero-content {
+    padding: 60px 0 60px 0;
+    color: $white;
+    width: 100%;
+    height: 100%;
+}
+
+.tagline {
+    margin: u(100px 0 30px 0);
+    letter-spacing: .1em;
+    @include setFont($family: $sansHeadersFontFamily, $size: 35px);
+    @media (min-width: $tabletLandscape) {
+        @include setFont($family: $sansHeadersFontFamily, $size: 45px);
+    }
+    @media (min-width: $mediumDesktop) {
+        @include setFont($family: $sansHeadersFontFamily, $size: 50px);
+    }
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
+
 .hero {
     min-height: 100%;
     min-width: 100%;
