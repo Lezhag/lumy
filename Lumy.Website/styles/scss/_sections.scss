@@ -35,7 +35,7 @@
 }
 
 .showcase-01 {
-    background: url('../images/gallery/sections/basket-02.jpg') center center no-repeat fixed;
+    background: url('../images/gallery/sections/wreath_1400.jpg') center center no-repeat fixed;
     background-size: cover;
 }
 
@@ -66,5 +66,30 @@
 
     @media screen and (min-width: 1001px) {
         background-image: url("../images/gallery/sections/lumy-horse_1400.jpg");
+    }
+}
+
+.showcase-01 {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    @media only screen and (max-width: 500px) {
+        background-image: url("../images/gallery/sections/wreath_750.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 501px) and (max-width: 820px) {
+        background-image: url("../images/gallery/sections/wreath_820.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 821px) and (max-width: 1000px) {
+        background-image: url("../images/gallery/sections/wreath_1000.jpg");
+    }
+
+    @media screen and (min-width: 1001px) {
+        background-image: url("../images/gallery/sections/wreath_1400.jpg");
     }
 }
