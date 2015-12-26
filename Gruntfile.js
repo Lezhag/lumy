@@ -47,7 +47,7 @@ module.exports = function (grunt) {
                     nonull: true,
                     dest: '<%= app.cssDir %>/vendor/',
                     src: ['<%= app.bower %>/bootstrap/dist/css/*.css', '!<%= app.bower %>/bootstrap/dist/css/*.min.css',
-                        '<%= app.bower %>/fancybox/source/*.css', '!<%= app.bower %>/fancybox/source/*.min.css',
+                        //'<%= app.bower %>/fancybox/source/*.css', '!<%= app.bower %>/fancybox/source/*.min.css',
                         '<%= app.node %>/animate.css/*.css', '!<%= app.node %>/animate.css/*.min.css',
                         '<%= app.bower %>/magnific-popup/dist/*.css', '!<%= app.bower %>/magnific-popup/dist/*.min.css',
                         '<%= app.bower %>/flexboxgrid/dist/*.css', '!<%= app.bower %>/flexboxgrid/dist/*.min.css',
@@ -68,9 +68,9 @@ module.exports = function (grunt) {
                     nonull: true,
                     dest: '<%= app.js %>/vendor/',
                     src: [
-                        '<%= app.bower %>/fancybox/source/jquery.fancybox.js',
+                        //'<%= app.bower %>/fancybox/source/jquery.fancybox.js',
                         '<%= app.bower %>/retina.js/src/retina.js',
-                        '<%= app.node %>/waypoints/lib/noframework.waypoints.js',
+                        '<%= app.node %>/waypoints/lib/jquery.waypoints.js',
                         '<%= app.bower %>/bootstrap/dist/js/bootstrap.js',
                         '<%= app.bower %>/magnific-popup/dist/jquery.magnific-popup.js',
                         '<%= app.bower %>/slick-carousel/slick/slick.js'

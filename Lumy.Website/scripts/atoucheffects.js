@@ -1,4 +1,5 @@
 /** Used Only For Touch Devices **/
+/*
 ( function( window ) {
 	
 	// for touch devices: add class visible to the figcaption when touching it.
@@ -79,3 +80,4 @@
 	}
 
 })( window );
+	*/

@@ -2,30 +2,30 @@
 Footer
 ========================================================================== */
 footer {
-    padding: 100px 0;
+    padding: u(100px 0);
 }
 
 footer p {
-    color: #c7cacc;
+    color: $rose;
     font-size: 12px;
 }
 
 footer ul {
-    margin-top: 30px;
+    margin-top: u(30px);
 }
 
 footer li {
-    float: left;
-    margin-right: 15%;
+    float: right;
+    margin-left: 15%;
     list-style: none;
     text-transform: uppercase;
     font-weight: 400;
 }
 
 footer li a {
-    color: #3f6184;
+    color: $lilac;
 }
 
 footer li:last-child {
-    margin-right: 0;
+    margin-left: 0;
 }
