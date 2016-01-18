@@ -1,0 +1,10 @@
+/* ==========================================================================
+Links
+========================================================================== */
+/*
+* Improves readability when focused and also mouse hovered in all browsers.
+*/
+a:active, a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+}

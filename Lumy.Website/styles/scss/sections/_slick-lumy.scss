@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+// Default Variables
+
+$slick-font-path: "./fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "./" !default;
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: "←" !default;
+$slick-next-character: "→" !default;
+$slick-dot-character: "•" !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+@function slick-image-url($url) {
+    @if function-exists(image-url) {
+        @return image-url($url);
+    }
+    @else {
+        @return url($slick-loader-path + $url);
+    }
+}
+
+@function slick-font-url($url) {
+    @if function-exists(font-url) {
+        @return font-url($url);
+    }
+    @else {
+        @return url($slick-font-path + $url);
+    }
+}
+
+/* Slider */
+
+.slick-list {
+    .slick-loading & {
+        background: #fff url("../images/ajax-loader.gif") center center no-repeat;
+    }
+}
+
+/* Icons */
+@if $slick-font-family == "slick" {
+    @font-face {
+        font-family: "slick";
+        src: slick-font-url("slick.eot");
+        src: slick-font-url("slick.eot?#iefix") format("embedded-opentype"), slick-font-url("slick.woff") format("woff"), slick-font-url("slick.ttf") format("truetype"), slick-font-url("slick.svg#slick") format("svg");
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: u(60px);
+    width: u(50px);
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    margin-top: -10px\9; /*lte IE 8*/
+    padding: 0;
+    border: none;
+    outline: none;
+    z-index: z('slick-arrow');
+    background: url('../images/arrow.svg') no-repeat;
+    background-size: u(30px);
+    transition: all 500ms ease-in-out;
+
+    &:hover, &:focus {
+        outline: none;
+        background-color: transparent;
+        color: transparent;
+        transform: translate(u(10px), 0);
+    }
+    &.slick-disabled {
+        opacity: $slick-opacity-not-active;
+    }
+}
+
+.slick-prev {
+    left: u(-25px);
+    [dir="rtl"] & {
+        left: auto;
+        right: u(40px);
+    }
+}
+
+.slick-next {
+    right: u(-25px);
+    [dir="rtl"] & {
+        left: u(40px);
+        right: auto;
+        transform: scaleX(-1);
+        &:hover, &:focus {
+            transform: scaleX(-1) translate(u(10px), 0);
+        }
+    }
+}
+
+/* Dots */
+
+.slick-slider {
+    margin-bottom: u(30px);
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: u(50px);
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    li {
+        position: relative;
+        display: inline-block;
+        height: u(20px);
+        width: u(20px);
+        margin: 0 10px;
+        padding: 0;
+        cursor: pointer;
+        button {
+            border: none;
+            padding: 0;
+            display: inline-block;
+            width: u(15px);
+            height: u(15px);
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.1);
+            transition: 200ms;
+            outline: none;
+            cursor: pointer;
+            line-height: 0;
+            font-size: 0;
+            color: transparent;
+
+            &:hover, &:focus {
+                outline: none;
+                background: $rose-transparent;
+                box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.125), inset 0 1px 0 rgba(245, 220, 245, 0.75);
+            }
+        }
+        &.slick-active button {
+            background: $lilac;
+            box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.125), inset 0 1px 0 rgba(152, 78, 145, 0.75);
+        }
+    }
+}

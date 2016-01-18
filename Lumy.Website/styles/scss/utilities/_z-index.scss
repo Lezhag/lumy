@@ -1,0 +1,23 @@
+/* ==========================================================================
+Utility for the z-index
+========================================================================== */
+
+@function z($label) {
+  @return map-get($zindex, $label);
+}
+
+
+// z-index: z('variable');
+$zindex: (
+        'sticky-header': 100,
+        'main-menu': 101,
+        'menu-content': 105,
+        'menu-flower': 102,
+        'menu-image': 101,
+        'image-overlay': 2,
+        'section-content': 5,
+        'section-textContainer-before': -1,
+        'section-image': -2,
+        'section-page': 1,
+        'slick-arrow':10
+);

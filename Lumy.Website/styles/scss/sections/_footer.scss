@@ -1,0 +1,31 @@
+/* ==========================================================================
+Footer
+========================================================================== */
+footer {
+    padding: u(100px 0);
+}
+
+footer p {
+    color: $rose;
+    font-size: 12px;
+}
+
+footer ul {
+    margin-top: u(30px);
+}
+
+footer li {
+    float: right;
+    margin-left: 15%;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+footer li a {
+    color: $lilac;
+}
+
+footer li:last-child {
+    margin-left: 0;
+}

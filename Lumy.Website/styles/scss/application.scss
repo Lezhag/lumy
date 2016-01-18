@@ -1,14 +1,8 @@
-@import "../../../bower_components/UtilityBelt/utility-belt";
-@import "colors";
-@import "z-index";
-@import "fontUtilities";
-@import "navigation";
-@import "navigationOverlay";
-@import "stickyHeader";
-@import "frontPage";
-@import "contactUs";
-@import "about";
-@import "styles";
-@import "queries";
-@import "lightbox";
-@import "galllery-images";
+// config
+$px-only:false;
+
+// import sass functions
+@import "utilities/_utilities";
+
+// import site modules
+@import "bundle.scss";

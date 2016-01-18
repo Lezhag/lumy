@@ -1,0 +1,220 @@
+.brides-bouquet {
+    .section-image {
+        background-image: url('../images/gallery/sections/section-bouquet.jpg');
+    }
+    .section-thumbnail-01 {
+        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-01.jpg');
+    }
+    .section-thumbnail-02 {
+        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-02.jpg');
+    }
+    .section-thumbnail-03 {
+        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-03.jpg');
+    }
+    .section-thumbnail-04 {
+        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-04.jpg');
+    }
+    .section-thumbnail-05 {
+        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-05.jpg');
+    }
+    .section-thumbnail-06 {
+        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-kiss.jpg');
+    }
+}
+
+.arrangements {
+    .section-image {
+        background-image: url('../images/gallery/sections/section-arrangement.jpg');
+    }
+    .section-thumbnail-01 {
+        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-flower-arrangement.jpg');
+    }
+    .section-thumbnail-02 {
+        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-sunflower.jpg');
+    }
+    .section-thumbnail-03 {
+        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-hotel.jpg');
+    }
+}
+
+.head-wreath {
+    .section-image {
+        background-image: url('../images/gallery/sections/section-wreath.jpg');
+    }
+    .section-thumbnail-01 {
+        background-image: url('../images/gallery/section-wreath/thumbs/thumb-wreath.jpg');
+    }
+    .section-thumbnail-02 {
+        background-image: url('../images/gallery/section-wreath/thumbs/thumb-wreath-01.jpg');
+    }
+    .section-thumbnail-03 {
+        background-image: url('../images/gallery/section-wreath/thumbs/thumb-wreath-02.jpg');
+    }
+    .section-thumbnail-04 {
+        background-image: url('../images/gallery/section-wreath/thumbs/thumb-wreath-03.jpg');
+    }
+    .section-thumbnail-05 {
+        background-image: url('../images/gallery/section-wreath/thumbs/thumb-girl.jpg');
+    }
+    .section-thumbnail-06 {
+        background-image: url('../images/gallery/section-wreath/thumbs/thumb-bubbles-girl.jpg');
+    }
+}
+
+.workshop {
+    .section-image {
+        background-image: url('../images/gallery/sections/section-workshop.jpg');
+    }
+    .section-thumbnail-01 {
+        background-image: url('../images/gallery/section-workshop/thumbs/thumb-bachelorette-party.jpg');
+    }
+    .section-thumbnail-02 {
+        background-image: url('../images/gallery/section-workshop/thumbs/thumb-flower-pin.jpg');
+    }
+    .section-thumbnail-03 {
+        background-image: url('../images/gallery/section-workshop/thumbs/thumb-lumy-at-work.jpg');
+    }
+}
+
+.about {
+    .section-image {
+        background-image: url('../images/gallery/sections/section-about.jpg');
+    }
+    .section-thumbnail-01 {
+        background-image: url('../images/gallery/section-about/thumbs/thumb-lumy-worker.jpg');
+    }
+    .section-thumbnail-02 {
+        background-image: url('../images/gallery/section-about/thumbs/thumb-lumy-worker-02.jpg');
+    }
+    .section-thumbnail-03 {
+        background-image: url('../images/gallery/section-about/thumbs/thumb-lumy-worker-03.jpg');
+    }
+}
+
+.corsage {
+    .section-image {
+        background-image: url('../images/gallery/sections/section-corsage.jpg');
+    }
+    .section-thumbnail-01 {
+        background-image: url('../images/gallery/section-corsage/thumbs/thumb-corsage-orchid.jpg');
+    }
+    .section-thumbnail-02 {
+        background-image: url('../images/gallery/section-corsage/thumbs/thumb-corsage.jpg');
+    }
+    .section-thumbnail-03 {
+        background-image: url('../images/gallery/section-corsage/thumbs/thumb-bracelets.jpg');
+    }
+}
+
+.stand {
+    .section-image {
+        background-image: url('../images/gallery/sections/section-stand.jpg');
+    }
+    .section-thumbnail-01 {
+        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-01.jpg');
+    }
+    .section-thumbnail-02 {
+        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-02.jpg');
+    }
+    .section-thumbnail-03 {
+        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-03.jpg');
+    }
+    .section-thumbnail-04 {
+        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-04.jpg');
+    }
+    .section-thumbnail-05 {
+        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-05.jpg');
+    }
+    .section-thumbnail-06 {
+        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-06.jpg');
+    }
+    .section-thumbnail-07 {
+        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-07.jpg');
+    }
+    .section-thumbnail-08 {
+        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-08.jpg');
+    }
+    .section-thumbnail-09 {
+        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-09.jpg');
+    }
+}
+
+/* ==========================================================================
+Showcase
+========================================================================== */
+//
+//.showcase h1 {
+//    margin: u(0 0 20px 0);
+//    color: $white;
+//}
+//.showcase p {
+//    margin-bottom: u(25px);
+//    line-height: 1.9;
+//    color: $white;
+//}
+
+.showcase-wrap {
+    position: relative;
+    padding: 100px 0;
+    min-height: 600px;
+}
+
+.showcase-01 {
+    background: url('../images/gallery/sections/wreath_1400.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+.showcase-02 {
+    background: url('../images/gallery/sections/lumy-horse_1400.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+.showcase-02 {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    @media only screen and (max-width: 500px) {
+        background-image: url("../images/gallery/sections/lumy-horse_750.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 501px) and (max-width: 820px) {
+        background-image: url("../images/gallery/sections/lumy-horse_820.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 821px) and (max-width: 1000px) {
+        background-image: url("../images/gallery/sections/lumy-horse_1000.jpg");
+    }
+
+    @media screen and (min-width: 1001px) {
+        background-image: url("../images/gallery/sections/lumy-horse_1400.jpg");
+    }
+}
+
+.showcase-01 {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    @media only screen and (max-width: 500px) {
+        background-image: url("../images/gallery/sections/wreath_750.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 501px) and (max-width: 820px) {
+        background-image: url("../images/gallery/sections/wreath_820.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 821px) and (max-width: 1000px) {
+        background-image: url("../images/gallery/sections/wreath_1000.jpg");
+    }
+
+    @media screen and (min-width: 1001px) {
+        background-image: url("../images/gallery/sections/wreath_1400.jpg");
+    }
+}

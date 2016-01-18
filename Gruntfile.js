@@ -47,11 +47,11 @@ module.exports = function (grunt) {
                     nonull: true,
                     dest: '<%= app.cssDir %>/vendor/',
                     src: ['<%= app.bower %>/bootstrap/dist/css/*.css', '!<%= app.bower %>/bootstrap/dist/css/*.min.css',
-                        '<%= app.bower %>/fancybox/source/*.css', '!<%= app.bower %>/fancybox/source/*.min.css',
-                        '<%= app.bower %>/flickity/dist/*.css', '!<%= app.bower %>/flickity/dist/*.min.css',
+                        //'<%= app.bower %>/fancybox/source/*.css', '!<%= app.bower %>/fancybox/source/*.min.css',
                         '<%= app.node %>/animate.css/*.css', '!<%= app.node %>/animate.css/*.min.css',
                         '<%= app.bower %>/magnific-popup/dist/*.css', '!<%= app.bower %>/magnific-popup/dist/*.min.css',
-                        '<%= app.bower %>/flexboxgrid/dist/*.css', '!<%= app.bower %>/flexboxgrid/dist/*.min.css'
+                        '<%= app.bower %>/flexboxgrid/dist/*.css', '!<%= app.bower %>/flexboxgrid/dist/*.min.css',
+                        '<%= app.bower %>/slick-carousel/slick/slick.scss'//, '!<%= app.bower %>/slick-carousel/slick/*.min.scss'
                     ],
                     dot: true,
                     flatten: true,
@@ -67,12 +67,13 @@ module.exports = function (grunt) {
                 files: [{
                     nonull: true,
                     dest: '<%= app.js %>/vendor/',
-                    src: ['<%= app.bower %>/flickity/dist/flickity.pkgd.js',
-                        '<%= app.bower %>/fancybox/source/jquery.fancybox.js',
+                    src: [
+                        //'<%= app.bower %>/fancybox/source/jquery.fancybox.js',
                         '<%= app.bower %>/retina.js/src/retina.js',
-                        '<%= app.node %>/waypoints/lib/noframework.waypoints.js',
+                        '<%= app.node %>/waypoints/lib/jquery.waypoints.js',
                         '<%= app.bower %>/bootstrap/dist/js/bootstrap.js',
-                        '<%= app.bower %>/magnific-popup/dist/jquery.magnific-popup.js'
+                        '<%= app.bower %>/magnific-popup/dist/jquery.magnific-popup.js',
+                        '<%= app.bower %>/slick-carousel/slick/slick.js'
                     ],
                     dot: true,
                     flatten: true,
@@ -107,9 +108,9 @@ module.exports = function (grunt) {
                 nonull: true,
                 expand: true,
                 filter: 'isFile',
-                cwd: '<%= app.src %>/fonts',
+                cwd: '<%= app.cssDir %>/fonts',
                 src: ['**'],
-                dest: '<%= app.dist %>/fonts/'
+                dest: '<%= app.dist %>/css/fonts/'
             }
         },
 
@@ -122,6 +123,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     '<%= app.cssDir %>/main.css': '<%= app.scss %>/application.scss',
+                    '<%= app.cssDir %>/main-ie.css': '<%= app.scss %>/application-ie.scss',
                     '<%= app.cssDir %>/vendor.css': '<%= app.cssDir %>/vendor/vendors.scss'
                 }
             },
@@ -133,6 +135,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     '<%= app.dist %>/css/main.min.css': '<%= app.scss %>/application.scss',
+                    '<%= app.dist %>/css/main-ie.min.css': '<%= app.scss %>/application-ie.scss',
                     '<%= app.dist %>/css/vendor.min.css': '<%= app.cssDir %>/vendor/vendors.scss'
                 }
             }
@@ -143,7 +146,10 @@ module.exports = function (grunt) {
                 map: false
             },
             app: {
-                src: ['<%= app.cssDir %>/main.css', '<%= app.dist %>/css/main.min.css']
+                src: ['<%= app.cssDir %>/main.css',
+                    '<%= app.dist %>/css/main.min.css',
+                    '<%= app.cssDir %>/main-ie.css',
+                    '<%= app.dist %>/css/main-ie.min.css']
             },
             vendor: {
                 src: ['<%= app.cssDir %>/vendor.css', '<%= app.dist %>/css/vendor.min.css']
@@ -156,6 +162,7 @@ module.exports = function (grunt) {
             },
             all: [
                 '<%= app.cssDir %>/main.*',
+                '<%= app.cssDir %>/main-ie.*',
                 '<%= app.cssDir %>/vendor.*',
                 '<%= app.dist %>/css/main.*',
                 '<%= app.dist %>/css/vendor.*',
@@ -163,7 +170,7 @@ module.exports = function (grunt) {
                 '<%= app.dist %>/scripts/main.*',
                 '<%= app.dist %>/init/*.*',
                 '<%= app.dist %>/images/**',
-                '<%= app.dist %>/fonts/**'
+                '<%= app.dist %>/css/fonts/**'
             ]
         },
 
@@ -251,7 +258,10 @@ module.exports = function (grunt) {
                 interrupt: true
             },
             styles: {
-                files: ['<%= app.scss %>/**/*.scss', '<%= app.js %>/**/*.scss', '<%= app.cssDir %>/vendor/**/*.scss', '<%= app.src %>/*.tpl.html'],
+                files: ['<%= app.scss %>/**/*.scss',
+                    '<%= app.js %>/**/*.scss',
+                    '<%= app.cssDir %>/vendor/**/*.scss',
+                    '<%= app.src %>/*.tpl.html'],
                 tasks: ['sass:dev', 'autoprefixer', 'includeSource']
             }
         }

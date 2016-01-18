@@ -1,0 +1,141 @@
+/* ==========================================================================
+Navigation
+========================================================================== */
+.menu-toggler {
+    display: flex;
+}
+
+//main menu
+.main-menu {
+    transition: 550ms ease-in-out;
+    position: fixed;
+    left: 0;
+    z-index: z('main-menu');
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background: $rose;
+
+    .menu-content {
+        position: relative;
+        width: 100%;
+        z-index: z('menu-content');
+        max-height: 90%;
+        margin-top: 50px;
+        max-height: calc(100% - 50px);
+        @media screen and (min-width: $tabletLandscape) {
+            float: left;
+            width: 50%;
+            max-height: calc(100% - 100px);
+            transform: translate(0%, 0%);
+        }
+        @media screen and (min-width: $mediumDesktop) {
+            width: 40%;
+        }
+    }
+
+    .menu-items {
+        width: 65%;
+        margin: 0.5em auto;
+    }
+
+    .menu-image {
+        display: none;
+        transform: translateZ(0);
+        @media screen and (min-width: $tabletLandscape) {
+            position: relative;
+            display: block;
+            float: left;
+            height: 100%;
+            width: 50%;
+            background: $rose url('../images/gallery/basket.jpg') no-repeat 0 50%;
+            background-size: cover;
+
+            &:after, &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                z-index: z('menu-image');
+                width: 100%;
+                transform-origin: 100% 100%;
+                transition: transform .4s ease .15s, all 550ms ease-in-out 550ms;
+                transform: skew(0, 0);
+            }
+
+            &:after {
+                left: -100%;
+                background: $rose;
+            }
+
+            &:before {
+                left: -99.5%;
+                left: calc(-100% + 5px);
+                border-right: 1px solid rgba(255, 255, 255, .7);
+            }
+        }
+        @media screen and (min-width: $mediumDesktop) {
+            width: 60%;
+            background-image: url('../images/gallery/basket.jpg');
+        }
+    }
+    .page-header-social {
+        display: block;
+        opacity: 0;
+        margin-top: 1em;
+        transition: opacity .4s ease .9s;
+        @media screen and (min-width: $tabletLandscape) {
+            display: none;
+        }
+    }
+}
+
+.js-menu-open .main-menu {
+    visibility: visible;
+    opacity: 1;
+    .menu-items li {
+        transform: translateX(0);
+        opacity: 1;
+        margin: 1em auto;
+    }
+    .page-header-social {
+        opacity: 1;
+    }
+    .menu-image:after, .menu-image:before {
+        transition-delay: 0ms;
+        transform: translate(0, 0) translateZ(0) skew(-17deg, 0);
+    }
+}
+
+.menu-item {
+    &:hover, &:focus {
+        opacity: 0.5;
+    }
+}
+
+.menu-item-text {
+    color: $ocean-wave;
+    @include setFont($size: 16px);
+    @media (min-width: $tabletLandscape) {
+        @include setFont($size: 22px);
+    }
+    @media (min-width: $mediumDesktop) {
+        @include setFont($size: 30px);
+    }
+}
+
+$lotus-dims: 35px;
+
+.lotus {
+    display: inline-block;
+    height: u($lotus-dims);
+    width: u($lotus-dims);
+    background: $rose url('../images/lotus.png') no-repeat 0 100%;
+    background-size: u($lotus-dims);
+}
+
+
+
+
