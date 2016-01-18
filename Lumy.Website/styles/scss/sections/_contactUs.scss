@@ -14,9 +14,23 @@ Contact us
     color: $ocean-wave;
     padding: u(30px);
     @include setFont($size: 24px, $family: $sansHeadersFontFamily);
+    .header-content & {
+        margin: 0 auto;
+        padding: u(3px);
+    }
 }
+
 .phone-number {
-    letter-spacing: 0.25em;
+    letter-spacing: 0.1em;
+    @media only screen and (min-width: 500px) {
+        letter-spacing: 0.25em;
+    }
+}
+.phone-caption {
+    display: none;
+    @media only screen and (min-width: 500px) {
+        display: inline;
+    }
 }
 .phone {
     background: url('../images/phone.png') no-repeat 0 100%;
@@ -24,4 +38,14 @@ Contact us
     width: u(50px);
     height: u(50px);
     margin: 0 auto;
+    .header-content & {
+        display: none;
+        @media only screen and (min-width: 500px) {
+            display: inline-block;
+            background-size: u(30px);
+            margin-right: u(10px);
+            width: u(30px);
+            height: u(30px);
+        }
+    }
 }
