@@ -4,6 +4,9 @@ Contact us
 .contactUs {
   padding: 120px 0;
   background-color: $lilac;
+    & .contactUs-phone a {
+        color: $rose;
+    }
 }
 .contactUs-title {
   margin: 0 0 15px 0;
@@ -11,6 +14,9 @@ Contact us
 }
 
 .contactUs-phone {
+    a {
+        color: $ocean-wave;
+    }
     color: $ocean-wave;
     padding: u(30px);
     @include setFont($size: 24px, $family: $sansHeadersFontFamily);

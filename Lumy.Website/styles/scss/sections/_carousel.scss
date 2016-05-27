@@ -19,16 +19,20 @@
 
 .tagline {
     letter-spacing: .1em;
+    min-width: 400px;
     @include setFont($family: $sansHeadersFontFamily, $size: 35px);
     @media (min-width: $tabletLandscape) {
+        min-width: 500px;
         @include setFont($family: $sansHeadersFontFamily, $size: 45px);
     }
     @media (min-width: $mediumDesktop) {
+        min-width: 600px;
         @include setFont($family: $sansHeadersFontFamily, $size: 50px);
     }
 }
 
 .subtitle {
+    min-width: 500px;
     font-size: 1.5em;
 }
 

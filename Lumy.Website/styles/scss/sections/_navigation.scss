@@ -99,6 +99,9 @@ Navigation
         transform: translateX(0);
         opacity: 1;
         margin: 1em auto;
+        @media screen and (max-height: 500px) {
+            margin: 0;
+        }
     }
     .page-header-social {
         opacity: 1;
