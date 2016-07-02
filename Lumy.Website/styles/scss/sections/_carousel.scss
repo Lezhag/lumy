@@ -42,7 +42,7 @@
 }
 .hero-image {
     width: 100%;
-    background-position: center top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -160,5 +160,26 @@
 
     @media screen and (min-width: 1001px) {
         background-image: url("../images/gallery/section-hero/section-stand03_1400.jpg");
+    }
+}
+
+.image06 {
+    @media only screen and (max-width: 500px) {
+
+        background-image: url("../images/gallery/section-hero/section-stand04_750.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 501px) and (max-width: 820px) {
+        background-image: url("../images/gallery/section-hero/section-stand04_820.jpg");
+        background-position: center;
+    }
+
+    @media screen and (min-width: 821px) and (max-width: 1000px) {
+        background-image: url("../images/gallery/section-hero/section-stand04_1000.jpg");
+    }
+
+    @media screen and (min-width: 1001px) {
+        background-image: url("../images/gallery/section-hero/section-stand04_1400.jpg");
     }
 }
