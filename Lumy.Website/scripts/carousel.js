@@ -11,7 +11,7 @@ $(document).ready(function () {
         //adaptiveHeight: true,
         //variableWidth: true,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 2000,
         rtl: true
     }).on('beforeChange', function afterSlideChange(event, slick, currentSlide, nextSlide) {
         "use strict";

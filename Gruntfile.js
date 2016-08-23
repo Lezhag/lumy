@@ -123,7 +123,6 @@ module.exports = function (grunt) {
                 },
                 files: {
                     '<%= app.cssDir %>/main.css': '<%= app.scss %>/application.scss',
-                    '<%= app.cssDir %>/main-ie.css': '<%= app.scss %>/application-ie.scss',
                     '<%= app.cssDir %>/vendor.css': '<%= app.cssDir %>/vendor/vendors.scss'
                 }
             },
@@ -135,7 +134,6 @@ module.exports = function (grunt) {
                 },
                 files: {
                     '<%= app.dist %>/css/main.min.css': '<%= app.scss %>/application.scss',
-                    '<%= app.dist %>/css/main-ie.min.css': '<%= app.scss %>/application-ie.scss',
                     '<%= app.dist %>/css/vendor.min.css': '<%= app.cssDir %>/vendor/vendors.scss'
                 }
             }
@@ -147,9 +145,7 @@ module.exports = function (grunt) {
             },
             app: {
                 src: ['<%= app.cssDir %>/main.css',
-                    '<%= app.dist %>/css/main.min.css',
-                    '<%= app.cssDir %>/main-ie.css',
-                    '<%= app.dist %>/css/main-ie.min.css']
+                    '<%= app.dist %>/css/main.min.css']
             },
             vendor: {
                 src: ['<%= app.cssDir %>/vendor.css', '<%= app.dist %>/css/vendor.min.css']
@@ -162,7 +158,6 @@ module.exports = function (grunt) {
             },
             all: [
                 '<%= app.cssDir %>/main.*',
-                '<%= app.cssDir %>/main-ie.*',
                 '<%= app.cssDir %>/vendor.*',
                 '<%= app.dist %>/css/main.*',
                 '<%= app.dist %>/css/vendor.*',

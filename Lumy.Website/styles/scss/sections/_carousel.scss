@@ -7,6 +7,17 @@
     margin-right: u(150px);
 }
 
+.align-bottom {
+    position: absolute;
+    top: 90%;
+    margin-right: 50px;
+}
+
+.concept-text {
+    @include setFont($family: $sansHeadersFontFamily, $size: 35px);
+    color: white;
+}
+
 .hero-content {
     background-color: rgba(0,0,0,0.35);
     border-radius: u(25px);
