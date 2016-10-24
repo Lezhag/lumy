@@ -52,3 +52,35 @@ $('a[href*=#]:not([href=#])').click(function() {
 		}
 	}
 });
+
+
+/***************** Contact Us **********************/
+
+$(document).ready(function () {
+	var fullName, phone, email, date, hour, place, description;
+	$("#send_email").click(function () {
+		fullName = $("#fullName").val();
+		phone = $("#phone").val();
+		email = $("#email").val();
+		date = $("#date").val();
+		hour = $("#hour").val();
+		place = $("#place").val();
+		description = $("#description").val();
+		$("#message").text("פנייתך נשלחת ללומי...");
+		$.get("http://www.lumyflowers.com/send", {
+			fullName: fullName,
+			phone: phone,
+			email: email,
+			date: date,
+			hour: hour,
+			place: place,
+			description: description
+		}, function (data) {
+			if (data == "sent") {
+				$("#message").empty().html("נשלח!");
+			}
+		}, function() {
+			$("#message").empty().html("שגיאה!");
+		});
+	});
+});
