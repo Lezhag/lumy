@@ -33,3 +33,17 @@ $pixelBase: 16;  /* 1 */
     @return $list; /* 12 */
 
 }
+
+@mixin section-thumbnails($url-name, $length, $class-name: section-thumbnail) {
+    @for $i from 1 through $length {
+        @if ($i < 10) {
+            .#{$class-name}-0#{$i} {
+                background-image: url('../images/gallery/#{$url-name}-0#{$i}.jpg');
+            }
+        } @else {
+            .#{$class-name}-#{$i} {
+                background-image: url('../images/gallery/#{$url-name}-#{$i}.jpg');
+            }
+        }
+    }
+}

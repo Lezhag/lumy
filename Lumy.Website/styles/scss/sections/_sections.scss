@@ -2,144 +2,48 @@
     .section-image {
         background-image: url('../images/gallery/sections/section-bouquet.jpg');
     }
-    .section-thumbnail-01 {
-        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-01.jpg');
-    }
-    .section-thumbnail-02 {
-        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-02.jpg');
-    }
-    .section-thumbnail-03 {
-        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-03.jpg');
-    }
-    .section-thumbnail-04 {
-        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-04.jpg');
-    }
-    .section-thumbnail-05 {
-        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-05.jpg');
-    }
-    .section-thumbnail-06 {
-        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-06.jpg');
-    }
-    .section-thumbnail-07 {
-        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-07.jpg');
-    }
-    .section-thumbnail-08 {
-        background-image: url('../images/gallery/section-bridal/thumbs/thumb-bouquet-08.jpg');
-    }
+
+    @include section-thumbnails($url-name: 'section-bridal/thumbs/thumb-bouquet', $length: 9);
 }
 
 .gifts {
     .section-image {
         background-image: url('../images/gallery/sections/section-gifts.jpg');
     }
-    .section-thumbnail-01 {
-        background-image: url('../images/gallery/section-gifts/thumbs/thumb-gifts-01.jpg');
-    }
-    .section-thumbnail-02 {
-        background-image: url('../images/gallery/section-gifts/thumbs/thumb-gifts-02.jpg');
-    }
-    .section-thumbnail-03 {
-        background-image: url('../images/gallery/section-gifts/thumbs/thumb-gifts-03.jpg');
-    }
-    .section-thumbnail-04 {
-        background-image: url('../images/gallery/section-gifts/thumbs/thumb-gifts-04.jpg');
-    }
-    .section-thumbnail-05 {
-        background-image: url('../images/gallery/section-gifts/thumbs/thumb-gifts-05.jpg');
-    }
-    .section-thumbnail-06 {
-        background-image: url('../images/gallery/section-gifts/thumbs/thumb-gifts-06.jpg');
-    }
-    .section-thumbnail-07 {
-        background-image: url('../images/gallery/section-gifts/thumbs/thumb-gifts-07.jpg');
-    }
+
+    @include section-thumbnails($url-name: 'section-gifts/thumbs/thumb-gifts', $length: 8);
 }
 
 .arrangements {
     .section-image {
         background-image: url('../images/gallery/sections/section-arrangement.jpg');
     }
-    .section-thumbnail-01 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-01.jpg');
-    }
-    .section-thumbnail-02 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-02.jpg');
-    }
-    .section-thumbnail-03 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-03.jpg');
-    }
-    .section-thumbnail-04 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-04.jpg');
-    }
-    .section-thumbnail-05 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-05.jpg');
-    }
-    .section-thumbnail-06 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-06.jpg');
-    }
-    .section-thumbnail-07 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-07.jpg');
-    }
-    .section-thumbnail-08 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-08.jpg');
-    }
-    .section-thumbnail-09 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-09.jpg');
-    }
-    .section-thumbnail-10 {
-        background-image: url('../images/gallery/section-arrangements/thumbs/thumb-arrangement-10.jpg');
-    }
+
+    @include section-thumbnails($url-name: 'section-arrangements/thumbs/thumb-arrangement', $length: 10);
 }
 
 .head-wreath {
     .section-image {
         background-image: url('../images/gallery/sections/section-wreath.jpg');
     }
-    .section-thumbnail-01 {
-        background-image: url('../images/gallery/section-wreath/thumbs/thumb-wreath-01.jpg');
-    }
-    .section-thumbnail-02 {
-        background-image: url('../images/gallery/section-wreath/thumbs/thumb-wreath-02.jpg');
-    }
-    .section-thumbnail-03 {
-        background-image: url('../images/gallery/section-wreath/thumbs/thumb-wreath-03.jpg');
-    }
-    .section-thumbnail-04 {
-        background-image: url('../images/gallery/section-wreath/thumbs/thumb-wreath-04.jpg');
-    }
-    .section-thumbnail-05 {
-        background-image: url('../images/gallery/section-wreath/thumbs/thumb-wreath-05.jpg');
-    }
+
+    @include section-thumbnails($url-name: 'section-wreath/thumbs/thumb-wreath', $length: 5);
 }
 
 .workshop {
     .section-image {
         background-image: url('../images/gallery/sections/section-workshop.jpg');
     }
-    .section-thumbnail-01 {
-        background-image: url('../images/gallery/section-workshop/thumbs/thumb-bachelorette-party.jpg');
-    }
-    .section-thumbnail-02 {
-        background-image: url('../images/gallery/section-workshop/thumbs/thumb-flower-pin.jpg');
-    }
-    .section-thumbnail-03 {
-        background-image: url('../images/gallery/section-workshop/thumbs/thumb-lumy-at-work.jpg');
-    }
+
+    @include section-thumbnails($url-name: 'section-workshop/thumbs/thumb-workshop', $length: 4);
 }
 
 .about {
     .section-image {
         background-image: url('../images/gallery/sections/section-about.jpg');
     }
-    .section-thumbnail-01 {
-        background-image: url('../images/gallery/section-about/thumbs/thumb-lumy-worker.jpg');
-    }
-    .section-thumbnail-02 {
-        background-image: url('../images/gallery/section-about/thumbs/thumb-lumy-worker-02.jpg');
-    }
-    .section-thumbnail-03 {
-        background-image: url('../images/gallery/section-about/thumbs/thumb-lumy-worker-03.jpg');
-    }
+
+    @include section-thumbnails($url-name: 'section-about/thumbs/thumb-lumy-worker', $length: 3);
 }
 
 .corsage {
@@ -164,63 +68,13 @@
     .section-image {
         background-image: url('../images/gallery/sections/section-stand.jpg');
     }
-    .section-thumbnail-01 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-01.jpg');
-    }
-    .section-thumbnail-02 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-02.jpg');
-    }
-    .section-thumbnail-03 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-03.jpg');
-    }
-    .section-thumbnail-04 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-04.jpg');
-    }
-    .section-thumbnail-05 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-05.jpg');
-    }
-    .section-thumbnail-06 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-06.jpg');
-    }
-    .section-thumbnail-07 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-07.jpg');
-    }
-    .section-thumbnail-08 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-08.jpg');
-    }
-    .section-thumbnail-09 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-09.jpg');
-    }
-    .section-thumbnail-10 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-10.jpg');
-    }
-    .section-thumbnail-11 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-11.jpg');
-    }
-    .section-thumbnail-12 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-12.jpg');
-    }
-    .section-thumbnail-13 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-13.jpg');
-    }
-    .section-thumbnail-14 {
-        background-image: url('../images/gallery/section-stand/thumbs/thumb-stand-14.jpg');
-    }
+
+    @include section-thumbnails($url-name: 'section-stand/thumbs/thumb-stand', $length: 14);
 }
 
 /* ==========================================================================
 Showcase
 ========================================================================== */
-//
-//.showcase h1 {
-//    margin: u(0 0 20px 0);
-//    color: $white;
-//}
-//.showcase p {
-//    margin-bottom: u(25px);
-//    line-height: 1.9;
-//    color: $white;
-//}
 
 .showcase-wrap {
     position: relative;
