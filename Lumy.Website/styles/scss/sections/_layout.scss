@@ -11,10 +11,14 @@
     @media (min-width: $tabletLandscape) {
         height: u(450px);
     }
+    @media screen and (max-width: $tabletLandscape) {
+        height: auto;
+        flex-wrap: wrap;
+    }
 }
 
 .section-textContainer {
-    display: none;
+    //display: none;
     @media (min-width: $tabletLandscape) {
         display: inline-block;
         padding: u($section-topPadding-tablet 20px 0);
@@ -40,6 +44,13 @@
             transition: transform 400ms ease 150ms;
             background-color: $rose;
         }
+        @media screen and (max-width: $tabletLandscape) {
+            display: none;
+        }
+    }
+    @media screen and (max-width: $tabletLandscape) {
+        order: 2;
+        width: 100%;
     }
 }
 
@@ -113,6 +124,16 @@
         transform: translate(-50%, -50%);
         //color: $white;
         color: hsla(360, 100%, 100%, 0.8);
+        @media screen and (max-width: 900px) {
+            visibility: hidden;
+        }
+    }
+    @media screen and (max-width: $tabletLandscape) {
+        height: u(380px);
+        order: 1;
+        margin: 0;
+        position: relative;
+        width: 100%;
     }
 }
 
@@ -157,6 +178,11 @@
     .overlay-right & {
         justify-content: flex-start;
     }
+    @media screen and (max-width: $tabletLandscape) {
+        flex-wrap: wrap;
+        margin-top: 0;
+        height: auto;
+    }
 }
 
 .section-thumbnail {
@@ -170,6 +196,13 @@
     background-position-x: 50%;
     background-position-y: 50%;
     box-shadow: 0px 0px 2px 2px #fff;
+    @media screen and (max-width: $tabletLandscape) {
+        height: u(86px);
+    }
+    @media screen and (max-width: 600px) {
+        width: u(46px);
+        height: u(46px);
+    }
 }
 
 .image-overlay {
