@@ -7,6 +7,10 @@ Contact us
     & .contactUs-phone a {
         color: $rose;
     }
+
+    .col-md-12 {
+        width: 100%;
+    }
 }
 .contactUs-title {
   margin: 0 0 15px 0;
@@ -30,6 +34,9 @@ Contact us
     letter-spacing: 0.1em;
     @media only screen and (min-width: 500px) {
         letter-spacing: 0.25em;
+    }
+    @media screen and (max-width: 400px) {
+        font-size: 6vw;
     }
 }
 .phone-caption {

@@ -5,6 +5,16 @@
     position: absolute;
     top: 44%;
     margin-right: u(150px);
+    @media screen and (max-width: 900px) {
+        margin: 0;
+        width: 100%;
+        .col-md-12 {
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        top: 30%;
+    }
 }
 
 .align-bottom {
@@ -30,7 +40,7 @@
 
 .tagline {
     letter-spacing: .1em;
-    min-width: 400px;
+    //min-width: 400px;
     @include setFont($family: $sansHeadersFontFamily, $size: 35px);
     @media (min-width: $tabletLandscape) {
         min-width: 500px;
@@ -57,6 +67,9 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @media screen and (max-width: 900px) {
+        position: relative;
+    }
     @media only screen and (max-width: 500px) {
         min-height: 500px;
     }
