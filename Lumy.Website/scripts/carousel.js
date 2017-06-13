@@ -5,13 +5,13 @@ $(document).ready(function () {
     $('.hero').slick({
         dots: true,
         infinite: true,
-        speed: 750,
+        speed: 1000,
         slidesToShow: 1,
         //centerMode: true,
         //adaptiveHeight: true,
         //variableWidth: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
         rtl: true
     }).on('beforeChange', function afterSlideChange(event, slick, currentSlide, nextSlide) {
         "use strict";
